@@ -7,6 +7,9 @@ let btnCriar = document.getElementById("btnCriar");
 // URL da API para pegar usuário
 const apiGetMe = "https://ctd-todo-api.herokuapp.com/v1/users/getMe";
 
+// URL para pegar as tarefas
+const apiTarefas = "https://ctd-todo-api.herokuapp.com/v1/tasks";
+
 // Pegar usuario
 fetch(apiGetMe, {
   method: "GET",
@@ -32,10 +35,7 @@ closeApp.addEventListener("click", function () {
   window.location.href = "index.html";
 });
 
-// Pegar as tarefas
-const apiTarefas = "https://ctd-todo-api.herokuapp.com/v1/tasks";
-
-fetch(apiTarefas, {
+/*fetch(apiTarefas, {
   method: "GET",
   headers: {
     "Content-type": "application/json",
@@ -46,7 +46,14 @@ fetch(apiTarefas, {
     return resposta.json();
   })
   .then(function (data) {
-    data.forEach(function (task) {
+    data.forEach(function (task) {*/
+    let task = {
+      id: 1,
+      createdAt: "16/09/2024",
+      description: "Tarefa de Teste",
+      completed: false
+    };
+
       let testIni = document.getElementsByClassName("container");
       if (testIni[0].id == "skeleton") {
         testIni[0].innerHTML = "";
@@ -171,11 +178,11 @@ fetch(apiTarefas, {
             console.log(erro);
           });
       });
-    });
+    /*});
   })
   .catch(function (erro) {
     console.log(erro);
-  });
+  });*/
 
 // Criar uma nova tarefa
 btnCriar.addEventListener("click", function (event) {

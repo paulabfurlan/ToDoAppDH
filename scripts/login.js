@@ -6,6 +6,9 @@ let erroSenha = document.getElementById("erroSenha");
 
 let erroCampos = [true, true];
 
+// URL da API para Logar
+const apiLogin = "https://ctd-todo-api.herokuapp.com/v1/users/login";
+
 txtEmail.addEventListener("keyup", function () {
   let erros = true;
   let aux = 0;
@@ -13,7 +16,7 @@ txtEmail.addEventListener("keyup", function () {
   if (txtEmail.value === "") {
     if (!txtEmail.classList.contains("erro")) txtEmail.classList.add("erro");
     erroEmail.innerText = "Campo obrigatório!!";
-  } else if (!txtEmail.value.includes("@")) {
+  } else if (!(txtEmail.value.includes("@") && txtEmail.value.includes("."))) {
     if (!txtEmail.classList.contains("erro")) txtEmail.classList.add("erro");
     erroEmail.innerText = "O e-mail precisa ser válido";
   } else {
@@ -55,9 +58,6 @@ txtSenha.addEventListener("keyup", function () {
   if (aux === erroCampos.length) btnAcessar.disabled = false;
   else btnAcessar.disabled = true;
 });
-
-// URL da API para Logar
-const apiLogin = "https://ctd-todo-api.herokuapp.com/v1/users/login";
 
 btnAcessar.addEventListener("click", function (event) {
   event.preventDefault();
