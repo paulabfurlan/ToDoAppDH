@@ -113,3 +113,24 @@ small {
 .erro:focus {
   border: red solid 2px;
 }
+
+@media (max-width: 600px) {
+  .left{
+    display: none;
+  }
+
+  .right{
+    width: 100%;
+    display: block;
+  }
+
+  form{
+    max-width: 100%;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  input{
+    min-height: 2em;
+  }
+}
