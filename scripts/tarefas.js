@@ -35,7 +35,7 @@ closeApp.addEventListener("click", function () {
   window.location.href = "index.html";
 });
 
-/*fetch(apiTarefas, {
+fetch(apiTarefas, {
   method: "GET",
   headers: {
     "Content-type": "application/json",
@@ -46,13 +46,13 @@ closeApp.addEventListener("click", function () {
     return resposta.json();
   })
   .then(function (data) {
-    data.forEach(function (task) {*/
-    let task = {
+    data.forEach(function (task) {
+    /*let task = {
       id: 1,
       createdAt: "16/09/2024",
       description: "Tarefa de Teste",
       completed: false
-    };
+    };*/
 
       let testIni = document.getElementsByClassName("container");
       if (testIni[0].id == "skeleton") {
@@ -178,11 +178,11 @@ closeApp.addEventListener("click", function () {
             console.log(erro);
           });
       });
-    /*});
+    });
   })
   .catch(function (erro) {
     console.log(erro);
-  });*/
+  });
 
 // Criar uma nova tarefa
 btnCriar.addEventListener("click", function (event) {
