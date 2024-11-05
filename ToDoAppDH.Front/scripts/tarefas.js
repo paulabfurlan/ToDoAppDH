@@ -84,7 +84,7 @@ fetch(apiTarefas, {
       p.classList.add("nome");
       p.innerText = task.description;
       p2.classList.add("timestamp");
-      p2.innerText = "Criada em " + time.split("T")[0];
+      p2.innerText = "Created in " + time.split("T")[0];
       div2.appendChild(p);
       div2.appendChild(p2);
 
@@ -219,7 +219,7 @@ btnCriar.addEventListener("click", function (event) {
         console.log(erro);
       });
   } else {
-    alert("Você precisa dar um nome para a sua tarefa!");
+    alert("You need to give a name to your task!");
   }
 });
 

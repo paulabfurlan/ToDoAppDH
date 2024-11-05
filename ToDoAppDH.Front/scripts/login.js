@@ -15,10 +15,10 @@ txtEmail.addEventListener("keyup", function () {
 
   if (txtEmail.value === "") {
     if (!txtEmail.classList.contains("erro")) txtEmail.classList.add("erro");
-    erroEmail.innerText = "Campo obrigatório!!";
+    erroEmail.innerText = "Mandatory field!!";
   } else if (!(txtEmail.value.includes("@") && txtEmail.value.includes("."))) {
     if (!txtEmail.classList.contains("erro")) txtEmail.classList.add("erro");
-    erroEmail.innerText = "O e-mail precisa ser válido";
+    erroEmail.innerText = "The e-mail address needs to be valid.";
   } else {
     txtEmail.classList.remove("erro");
     erroEmail.innerText = "";
@@ -40,10 +40,10 @@ txtSenha.addEventListener("keyup", function () {
 
   if (txtSenha.value === "") {
     if (!txtSenha.classList.contains("erro")) txtSenha.classList.add("erro");
-    erroSenha.innerText = "Campo obrigatório!!";
+    erroSenha.innerText = "Mandatory field!!";
   } else if (txtSenha.value.length < 6) {
     if (!txtSenha.classList.contains("erro")) txtSenha.classList.add("erro");
-    erroSenha.innerText = "Mínimo de 6 caracteres.";
+    erroSenha.innerText = "The password must contain a minimum of 6 characters.";
   } else {
     txtSenha.classList.remove("erro");
     erroSenha.innerText = "";
@@ -84,7 +84,7 @@ btnAcessar.addEventListener("click", function (event) {
           sessionStorage.setItem("jwt", data.jwt);
           window.location.href = "tarefas.html";
         } else {
-          alert("Usuário ou senha incorretos!");
+          alert("Username and / or password is incorrect!");
         }
       })
       .catch(function (erro) {

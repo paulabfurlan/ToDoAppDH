@@ -22,10 +22,10 @@ txtNome.addEventListener("keyup", function () {
 
   if (txtNome.value === "") {
     if (!txtNome.classList.contains("erro")) txtNome.classList.add("erro");
-    erroNome.innerText = "Campo obrigatório!!";
+    erroNome.innerText = "Mandatory field!!";
   } else if (txtNome.value.length === 1) {
     if (!txtNome.classList.contains("erro")) txtNome.classList.add("erro");
-    erroNome.innerText = "O nome precisa ter mais de uma letra!!";
+    erroNome.innerText = "The name must have at least two letters.";
   } else {
     txtNome.classList.remove("erro");
     erroNome.innerText = "";
@@ -48,11 +48,11 @@ txtSobrenome.addEventListener("keyup", function () {
   if (txtSobrenome.value == "") {
     if (!txtSobrenome.classList.contains("erro"))
       txtSobrenome.classList.add("erro");
-    erroSobrenome.innerText = "Campo obrigatório!!";
+    erroSobrenome.innerText = "Mandatory field!!";
   } else if (txtSobrenome.value.length == 1) {
     if (!txtSobrenome.classList.contains("erro"))
       txtSobrenome.classList.add("erro");
-    erroSobrenome.innerText = "O sobrenome precisa ter mais de uma letra!!";
+    erroSobrenome.innerText = "The last name must have at least two letters.";
   } else {
     txtSobrenome.classList.remove("erro");
     erroSobrenome.innerText = "";
@@ -74,10 +74,10 @@ txtEmail.addEventListener("keyup", function () {
 
   if (txtEmail.value == "") {
     if (!txtEmail.classList.contains("erro")) txtEmail.classList.add("erro");
-    erroEmail.innerText = "Campo obrigatório!!";
+    erroEmail.innerText = "Mandatory field!!";
   } else if (!(txtEmail.value.includes("@") && txtEmail.value.includes("."))) {
     if (!txtEmail.classList.contains("erro")) txtEmail.classList.add("erro");
-    erroEmail.innerText = "O e-mail precisa ser válido";
+    erroEmail.innerText = "The e-mail address needs to be valid.";
   } else {
     txtEmail.classList.remove("erro");
     erroEmail.innerText = "";
@@ -99,10 +99,10 @@ txtSenha.addEventListener("keyup", function () {
 
   if (txtSenha.value == "") {
     if (!txtSenha.classList.contains("erro")) txtSenha.classList.add("erro");
-    erroSenha.innerText = "Campo obrigatório!!";
+    erroSenha.innerText = "Mandatory field!!";
   } else if (txtSenha.value.length < 6) {
     if (!txtSenha.classList.contains("erro")) txtSenha.classList.add("erro");
-    erroSenha.innerText = "A senha precisa conter pelo menos 6 caracteres";
+    erroSenha.innerText = "The password must contain a minimum of 6 characters.";
   } else {
     txtSenha.classList.remove("erro");
     erroSenha.innerText = "";
@@ -125,11 +125,11 @@ txtRepSenha.addEventListener("keyup", function () {
   if (txtRepSenha.value == "") {
     if (!txtRepSenha.classList.contains("erro"))
       txtRepSenha.classList.add("erro");
-    erroRepSenha.innerText = "Campo obrigatório!!";
+    erroRepSenha.innerText = "Mandatory field!!";
   } else if (txtRepSenha.value != txtSenha.value) {
     if (!txtRepSenha.classList.contains("erro"))
       txtRepSenha.classList.add("erro");
-    erroRepSenha.innerText = "A senha precisa ser igual à anterior";
+    erroRepSenha.innerText = "The password here needs to be the same as above.";
   } else {
     txtRepSenha.classList.remove("erro");
     erroRepSenha.innerText = "";
@@ -169,7 +169,7 @@ btnCriar.addEventListener("click", function (event) {
       .then(function (data) {
         console.log(data);
         if (data.jwt) window.location.href = "index.html";
-        else alert("Erro na criação do novo usuário!");
+        else alert("Error while creating the new User!");
       })
       .catch(function (erro) {
         console.log(erro);
