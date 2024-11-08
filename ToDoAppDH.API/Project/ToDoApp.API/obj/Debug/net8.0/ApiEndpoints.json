@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "ToDoApp.API.Controllers.WeatherForecastController",
+    "Method": "GetV1",
+    "RelativePath": "api/v1/WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ToDoApp.API.Model.WeatherForecastV1, ToDoApp.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecastV1"
+  },
+  {
+    "ContainingType": "ToDoApp.API.Controllers.WeatherForecastController",
+    "Method": "GetV2",
+    "RelativePath": "api/v2/WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ToDoApp.API.Model.WeatherForecastV2, ToDoApp.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecastV2"
+  }
+]
