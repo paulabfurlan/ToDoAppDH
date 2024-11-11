@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ToDoApp.API.Model.Domain;
-using Task = ToDoApp.API.Model.Domain.Task;
+using ToDoApp.API.Model.V1.Domain;
+using Task = ToDoApp.API.Model.V1.Domain.Task;
 
 namespace ToDoApp.API.Data
 {
-	public class ToDoAppDbContext: DbContext
+    public class ToDoAppDbContext: DbContext
 	{
         public ToDoAppDbContext(DbContextOptions<ToDoAppDbContext> dbContextOptions) : base(dbContextOptions)
         {

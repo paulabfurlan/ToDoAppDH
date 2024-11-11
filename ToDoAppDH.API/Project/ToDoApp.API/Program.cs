@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using ToDoApp.API.Data;
+using ToDoApp.API.Mappings.V1;
+using ToDoApp.API.Repositories.V1;
 using Web_API_Versioning.API;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,6 +32,12 @@ builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 // Inject the DB dependencies
 builder.Services.AddDbContext<ToDoAppDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("ToDoAppConnectionString")));
+
+// Inject the Repository dependencies
+builder.Services.AddScoped<IUserRepository, SQLUserRepository>();
+
+// Inject the AutoMapper dependencies
+builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
 var app = builder.Build();
 
