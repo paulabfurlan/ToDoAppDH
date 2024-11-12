@@ -1,13 +1,23 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using ToDoApp.API.Data;
 using ToDoApp.API.Mappings.V1;
+using ToDoApp.API.Middlewares;
 using ToDoApp.API.Repositories.V1;
 using Web_API_Versioning.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+var logger = new LoggerConfiguration()
+	.WriteTo.Console()
+	.WriteTo.File("Logs/ToDoApp_Log.txt", rollingInterval: RollingInterval.Day)
+	.MinimumLevel.Information()
+	.CreateLogger();
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
 
 builder.Services.AddControllers();
 
@@ -26,7 +36,10 @@ builder.Services.AddVersionedApiExplorer(options =>
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+	c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+});
 builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 
 // Inject the DB dependencies
@@ -56,6 +69,8 @@ if (app.Environment.IsDevelopment())
 		}
 	});
 }
+
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 
 app.UseHttpsRedirection();
 

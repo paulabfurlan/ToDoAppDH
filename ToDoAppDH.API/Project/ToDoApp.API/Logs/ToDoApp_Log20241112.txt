@@ -1,0 +1,380 @@
+2024-11-12 19:00:40.958 -03:00 [WRN] This is a warning log
+2024-11-12 19:00:41.004 -03:00 [ERR] This is a error log
+2024-11-12 19:00:41.231 -03:00 [ERR] 393230be-f331-4114-83b7-c418b63fcf89 : This is a custom exception
+System.Exception: This is a custom exception
+   at ToDoApp.API.Controllers.UsersController.GetAllV1(String filterOn, String filterQuery, String sortBy, Nullable`1 isAscending, Int32 pageNumber, Int32 pageSize) in D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\Controllers\UsersController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ToDoApp.API.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext httpContext) in D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\Middlewares\ExceptionHandlerMiddleware.cs:line 17
+2024-11-12 19:02:45.930 -03:00 [INF] Now listening on: https://localhost:7042
+2024-11-12 19:02:45.967 -03:00 [INF] Now listening on: http://localhost:5198
+2024-11-12 19:02:46.028 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-12 19:02:46.031 -03:00 [INF] Hosting environment: Development
+2024-11-12 19:02:46.032 -03:00 [INF] Content root path: D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API
+2024-11-12 19:02:46.777 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/index.html - null null
+2024-11-12 19:02:47.051 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/index.html - 200 null text/html;charset=utf-8 279.7686ms
+2024-11-12 19:02:47.099 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_vs/browserLink - null null
+2024-11-12 19:02:47.099 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-12 19:02:47.140 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 38.4621ms
+2024-11-12 19:02:47.195 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 97.2289ms
+2024-11-12 19:02:47.300 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - null null
+2024-11-12 19:02:47.502 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 202.0733ms
+2024-11-12 19:02:52.145 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - null null
+2024-11-12 19:02:52.167 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 19:02:52.221 -03:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllV1(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 19:02:52.661 -03:00 [INF] GetAll Action Method was invoked
+2024-11-12 19:02:52.663 -03:00 [WRN] This is a warning log
+2024-11-12 19:02:52.665 -03:00 [ERR] This is a error log
+2024-11-12 19:02:52.774 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API) in 547.1818ms
+2024-11-12 19:02:52.778 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 19:02:52.906 -03:00 [ERR] cb46f711-096c-4643-bb73-33157928e9b1 : This is a custom exception
+System.Exception: This is a custom exception
+   at ToDoApp.API.Controllers.UsersController.GetAllV1(String filterOn, String filterQuery, String sortBy, Nullable`1 isAscending, Int32 pageNumber, Int32 pageSize) in D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\Controllers\UsersController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ToDoApp.API.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext httpContext) in D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\Middlewares\ExceptionHandlerMiddleware.cs:line 17
+2024-11-12 19:02:53.027 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - 500 null application/json; charset=utf-8 880.0454ms
+2024-11-12 19:15:57.279 -03:00 [INF] Now listening on: https://localhost:7042
+2024-11-12 19:15:57.326 -03:00 [INF] Now listening on: http://localhost:5198
+2024-11-12 19:15:57.412 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-12 19:15:57.415 -03:00 [INF] Hosting environment: Development
+2024-11-12 19:15:57.417 -03:00 [INF] Content root path: D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API
+2024-11-12 19:15:58.323 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/index.html - null null
+2024-11-12 19:15:58.913 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/index.html - 200 null text/html;charset=utf-8 602.5472ms
+2024-11-12 19:15:58.983 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-12 19:15:59.009 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_vs/browserLink - null null
+2024-11-12 19:15:59.047 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 63.8593ms
+2024-11-12 19:15:59.153 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 143.9881ms
+2024-11-12 19:15:59.224 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/favicon-16x16.png - null null
+2024-11-12 19:15:59.250 -03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-11-12 19:15:59.254 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/favicon-16x16.png - 499 665 image/png 29.7011ms
+2024-11-12 19:15:59.312 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - null null
+2024-11-12 19:15:59.534 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 222.1783ms
+2024-11-12 19:16:29.157 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - null null
+2024-11-12 19:16:29.175 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 19:16:29.213 -03:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllV1(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 19:16:32.310 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 19:16:32.314 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 19:16:34.047 -03:00 [INF] Executed DbCommand (180ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[LastName], [u].[Name]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-11-12 19:16:34.169 -03:00 [INF] GetAll for UsersController returned: [{"Id":"b21d8b6d-3242-4c5e-8fa9-c032a60a91a4","Name":"Paula","LastName":"Furlan","Email":"email@test.com"}]
+2024-11-12 19:16:34.191 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoApp.API.Model.V1.DTO.UserDto, ToDoApp.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-12 19:16:34.213 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API) in 4991.9342ms
+2024-11-12 19:16:34.218 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 19:16:34.259 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 5102.2611ms
+2024-11-12 19:24:09.305 -03:00 [INF] Now listening on: https://localhost:7042
+2024-11-12 19:24:09.383 -03:00 [INF] Now listening on: http://localhost:5198
+2024-11-12 19:24:09.548 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-12 19:24:09.559 -03:00 [INF] Hosting environment: Development
+2024-11-12 19:24:09.563 -03:00 [INF] Content root path: D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API
+2024-11-12 19:24:10.300 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/index.html - null null
+2024-11-12 19:24:10.615 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/index.html - 200 null text/html;charset=utf-8 327.8331ms
+2024-11-12 19:24:10.684 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_vs/browserLink - null null
+2024-11-12 19:24:10.684 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-12 19:24:10.707 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 23.2607ms
+2024-11-12 19:24:10.766 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.9505ms
+2024-11-12 19:24:10.905 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - null null
+2024-11-12 19:24:10.951 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/v1/Users" for actions - ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API),ToDoApp.API.Controllers.UsersController.GetByIdV1 (ToDoApp.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-12 19:24:11.040 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 135.6289ms
+2024-11-12 19:31:46.330 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/v1/Users" for actions - ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API),ToDoApp.API.Controllers.UsersController.GetByIdV1 (ToDoApp.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-12 19:35:19.544 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - ToDoApp.API.Controllers.UsersController.GetByIdV1 (ToDoApp.API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-12 19:42:06.468 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - ToDoApp.API.Controllers.UsersController.GetByIdV1 (ToDoApp.API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-12 19:44:32.305 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 19:44:32.350 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 19:44:54.203 -03:00 [ERR] GetUserById didn't find user with id: b21d8b6d-3242-4c5e-8fa9-c032a60a91a5
+2024-11-12 20:01:30.626 -03:00 [INF] Now listening on: https://localhost:7042
+2024-11-12 20:01:30.671 -03:00 [INF] Now listening on: http://localhost:5198
+2024-11-12 20:01:30.760 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-12 20:01:30.763 -03:00 [INF] Hosting environment: Development
+2024-11-12 20:01:30.765 -03:00 [INF] Content root path: D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API
+2024-11-12 20:01:31.719 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/index.html - null null
+2024-11-12 20:01:32.097 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/index.html - 200 null text/html;charset=utf-8 384.5646ms
+2024-11-12 20:01:32.121 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/swagger-ui.css - null null
+2024-11-12 20:01:32.153 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-12 20:01:32.153 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_vs/browserLink - null null
+2024-11-12 20:01:32.170 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 17.5929ms
+2024-11-12 20:01:32.194 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-11-12 20:01:32.237 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/swagger-ui.css - 499 143943 text/css 116.292ms
+2024-11-12 20:01:32.284 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 131.534ms
+2024-11-12 20:01:32.353 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/favicon-16x16.png - null null
+2024-11-12 20:01:32.368 -03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-11-12 20:01:32.370 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/favicon-16x16.png - 499 665 image/png 17.6724ms
+2024-11-12 20:01:32.433 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - null null
+2024-11-12 20:01:32.624 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 191.3968ms
+2024-11-12 20:01:58.929 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Users - application/json 170
+2024-11-12 20:01:58.942 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API)'
+2024-11-12 20:01:58.978 -03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ToDoApp.API.Model.V1.DTO.AddUserRequestDto) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:01:59.352 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-12 20:01:59.377 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API) in 388.3695ms
+2024-11-12 20:01:59.380 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API)'
+2024-11-12 20:01:59.385 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Users - 400 null application/problem+json; charset=utf-8 455.1346ms
+2024-11-12 20:02:24.256 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Users - application/json 173
+2024-11-12 20:02:24.263 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API)'
+2024-11-12 20:02:24.266 -03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ToDoApp.API.Model.V1.DTO.AddUserRequestDto) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:02:24.289 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-12 20:02:24.295 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API) in 23.8222ms
+2024-11-12 20:02:24.304 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API)'
+2024-11-12 20:02:24.306 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Users - 400 null application/problem+json; charset=utf-8 50.7474ms
+2024-11-12 20:02:50.759 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Users - application/json 77
+2024-11-12 20:02:50.765 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API)'
+2024-11-12 20:02:50.768 -03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ToDoApp.API.Model.V1.DTO.AddUserRequestDto) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:02:50.785 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-12 20:02:50.790 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API) in 12.2603ms
+2024-11-12 20:02:50.795 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API)'
+2024-11-12 20:02:50.801 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Users - 400 null application/problem+json; charset=utf-8 42.808ms
+2024-11-12 20:03:03.618 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Users - application/json 83
+2024-11-12 20:03:03.623 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API)'
+2024-11-12 20:03:03.625 -03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ToDoApp.API.Model.V1.DTO.AddUserRequestDto) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:03:03.633 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-12 20:03:03.637 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API) in 4.9429ms
+2024-11-12 20:03:03.641 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API)'
+2024-11-12 20:03:03.646 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Users - 400 null application/problem+json; charset=utf-8 28.492ms
+2024-11-12 20:03:16.822 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Users - application/json 87
+2024-11-12 20:03:16.826 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API)'
+2024-11-12 20:03:16.828 -03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ToDoApp.API.Model.V1.DTO.AddUserRequestDto) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:03:18.198 -03:00 [INF] Executed DbCommand (66ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [LastName], [Name])
+VALUES (@p0, @p1, @p2, @p3);
+2024-11-12 20:03:18.256 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ToDoApp.API.Model.V1.DTO.UserDto'.
+2024-11-12 20:03:18.312 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API) in 1479.9038ms
+2024-11-12 20:03:18.317 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.Create (ToDoApp.API)'
+2024-11-12 20:03:18.326 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Users - 201 null application/json; charset=utf-8 1505.033ms
+2024-11-12 20:03:38.519 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - null null
+2024-11-12 20:03:38.525 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 20:03:38.533 -03:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllV1(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:03:38.827 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 20:03:38.838 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 20:03:38.999 -03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[LastName], [u].[Name]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-11-12 20:03:39.044 -03:00 [INF] GetAllUsers returned: [{"Id":"9cd41af0-c2ab-4bc3-99a4-08dd036e31f8","Name":"nomeTeste","LastName":"sobrenomeTeste","Email":"email@teste.com"},{"Id":"b21d8b6d-3242-4c5e-8fa9-c032a60a91a4","Name":"Paula","LastName":"Furlan","Email":"email@test.com"}]
+2024-11-12 20:03:39.048 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoApp.API.Model.V1.DTO.UserDto, ToDoApp.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-12 20:03:39.051 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API) in 507.0453ms
+2024-11-12 20:03:39.061 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 20:03:39.063 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 544.1105ms
+2024-11-12 20:15:17.401 -03:00 [INF] Now listening on: https://localhost:7042
+2024-11-12 20:15:17.465 -03:00 [INF] Now listening on: http://localhost:5198
+2024-11-12 20:15:17.564 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-12 20:15:17.568 -03:00 [INF] Hosting environment: Development
+2024-11-12 20:15:17.570 -03:00 [INF] Content root path: D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API
+2024-11-12 20:15:18.505 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/index.html - null null
+2024-11-12 20:15:18.831 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/index.html - 200 null text/html;charset=utf-8 343.0836ms
+2024-11-12 20:15:18.867 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/swagger-ui.css - null null
+2024-11-12 20:15:18.882 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-12 20:15:18.882 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_vs/browserLink - null null
+2024-11-12 20:15:18.896 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 14.0247ms
+2024-11-12 20:15:18.899 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-11-12 20:15:18.914 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/swagger-ui.css - 499 143943 text/css 47.4262ms
+2024-11-12 20:15:18.959 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.2491ms
+2024-11-12 20:15:19.006 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/favicon-16x16.png - null null
+2024-11-12 20:15:19.017 -03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-11-12 20:15:19.020 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/favicon-16x16.png - 499 665 image/png 14.0528ms
+2024-11-12 20:15:19.085 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - null null
+2024-11-12 20:15:19.296 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 211.1407ms
+2024-11-12 20:15:28.357 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - null null
+2024-11-12 20:15:28.377 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 20:15:28.432 -03:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllV1(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:15:29.716 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 20:15:29.721 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 20:15:30.282 -03:00 [INF] Executed DbCommand (63ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[LastName], [u].[Name]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-11-12 20:15:30.387 -03:00 [INF] GetAllUsers returned: [{"Id":"9cd41af0-c2ab-4bc3-99a4-08dd036e31f8","Name":"nomeTeste","LastName":"sobrenomeTeste","Email":"email@teste.com"},{"Id":"b21d8b6d-3242-4c5e-8fa9-c032a60a91a4","Name":"Paula","LastName":"Furlan","Email":"email@test.com"}]
+2024-11-12 20:15:30.398 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoApp.API.Model.V1.DTO.UserDto, ToDoApp.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-12 20:15:30.412 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API) in 1971.5325ms
+2024-11-12 20:15:30.415 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 20:15:30.427 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 2069.3075ms
+2024-11-12 20:15:48.031 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:7042/api/v1/Users/9cd41af0-c2ab-4bc3-99a4-08dd036e31f7 - application/json 259
+2024-11-12 20:15:48.037 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.UpdateV1 (ToDoApp.API)'
+2024-11-12 20:15:48.045 -03:00 [INF] Route matched with {action = "UpdateV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateV1(System.Guid, ToDoApp.API.Model.V1.DTO.UpdateUserRequestDto) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:15:48.146 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[LastName], [u].[Name]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-11-12 20:15:48.156 -03:00 [ERR] UpdateUser could not update user with id: 9cd41af0-c2ab-4bc3-99a4-08dd036e31f7
+2024-11-12 20:15:48.170 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-11-12 20:15:48.212 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.UpdateV1 (ToDoApp.API) in 158.4683ms
+2024-11-12 20:15:48.218 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.UpdateV1 (ToDoApp.API)'
+2024-11-12 20:15:48.220 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:7042/api/v1/Users/9cd41af0-c2ab-4bc3-99a4-08dd036e31f7 - 404 null application/problem+json; charset=utf-8 189.577ms
+2024-11-12 20:16:43.171 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:7042/api/v1/Users/9cd41af0-c2ab-4bc3-99a4-08dd036e31f8 - application/json 100
+2024-11-12 20:16:43.177 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.UpdateV1 (ToDoApp.API)'
+2024-11-12 20:16:43.189 -03:00 [INF] Route matched with {action = "UpdateV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateV1(System.Guid, ToDoApp.API.Model.V1.DTO.UpdateUserRequestDto) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:16:43.285 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[LastName], [u].[Name]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-11-12 20:16:43.397 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p3='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [LastName] = @p1, [Name] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+2024-11-12 20:16:43.421 -03:00 [INF] UpdateUser updated the informations {"Name":"nomeTeste2","LastName":"sobrenomeTeste2","Email":"email2@teste.com"} to {"Id":"9cd41af0-c2ab-4bc3-99a4-08dd036e31f8","Name":"nomeTeste2","LastName":"sobrenomeTeste2","Email":"email2@teste.com"}
+2024-11-12 20:16:43.428 -03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoApp.API.Model.V1.DTO.UserDto'.
+2024-11-12 20:16:43.433 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.UpdateV1 (ToDoApp.API) in 235.355ms
+2024-11-12 20:16:43.438 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.UpdateV1 (ToDoApp.API)'
+2024-11-12 20:16:43.443 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:7042/api/v1/Users/9cd41af0-c2ab-4bc3-99a4-08dd036e31f8 - 200 null application/json; charset=utf-8 271.5245ms
+2024-11-12 20:18:56.762 -03:00 [INF] Now listening on: https://localhost:7042
+2024-11-12 20:18:56.823 -03:00 [INF] Now listening on: http://localhost:5198
+2024-11-12 20:18:56.898 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-12 20:18:56.903 -03:00 [INF] Hosting environment: Development
+2024-11-12 20:18:56.906 -03:00 [INF] Content root path: D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API
+2024-11-12 20:18:57.739 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/index.html - null null
+2024-11-12 20:18:58.038 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/index.html - 200 null text/html;charset=utf-8 307.7486ms
+2024-11-12 20:18:58.128 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-12 20:18:58.128 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_vs/browserLink - null null
+2024-11-12 20:18:58.165 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 35.4859ms
+2024-11-12 20:18:58.288 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 160.8758ms
+2024-11-12 20:18:58.414 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - null null
+2024-11-12 20:18:58.708 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 294.3914ms
+2024-11-12 20:19:08.209 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - null null
+2024-11-12 20:19:08.228 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 20:19:08.270 -03:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllV1(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:19:09.630 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 20:19:09.634 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 20:19:10.235 -03:00 [INF] Executed DbCommand (67ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[LastName], [u].[Name]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-11-12 20:19:10.353 -03:00 [INF] GetAllUsers returned: [{"Id":"9cd41af0-c2ab-4bc3-99a4-08dd036e31f8","Name":"nomeTeste2","LastName":"sobrenomeTeste2","Email":"email2@teste.com"},{"Id":"b21d8b6d-3242-4c5e-8fa9-c032a60a91a4","Name":"Paula","LastName":"Furlan","Email":"email@test.com"}]
+2024-11-12 20:19:10.370 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoApp.API.Model.V1.DTO.UserDto, ToDoApp.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-12 20:19:10.386 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API) in 2106.9021ms
+2024-11-12 20:19:10.390 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 20:19:10.406 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 2197.5393ms
+2024-11-12 20:19:57.519 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:7042/api/v1/Users/9cd41af0-c2ab-4bc3-99a4-08dd036e31f8 - application/json 100
+2024-11-12 20:19:57.531 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.UpdateV1 (ToDoApp.API)'
+2024-11-12 20:19:57.547 -03:00 [INF] Route matched with {action = "UpdateV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateV1(System.Guid, ToDoApp.API.Model.V1.DTO.UpdateUserRequestDto) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:19:57.644 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[LastName], [u].[Name]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-11-12 20:19:57.755 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p3='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [LastName] = @p1, [Name] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+2024-11-12 20:19:57.778 -03:00 [INF] UpdateUser updated the user informations to {"Id":"9cd41af0-c2ab-4bc3-99a4-08dd036e31f8","Name":"nomeTeste3","LastName":"sobrenomeTeste3","Email":"email3@teste.com"}
+2024-11-12 20:19:57.782 -03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoApp.API.Model.V1.DTO.UserDto'.
+2024-11-12 20:19:57.787 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.UpdateV1 (ToDoApp.API) in 227.8156ms
+2024-11-12 20:19:57.790 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.UpdateV1 (ToDoApp.API)'
+2024-11-12 20:19:57.797 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:7042/api/v1/Users/9cd41af0-c2ab-4bc3-99a4-08dd036e31f8 - 200 null application/json; charset=utf-8 278.4679ms
+2024-11-12 20:25:07.729 -03:00 [INF] Now listening on: https://localhost:7042
+2024-11-12 20:25:07.776 -03:00 [INF] Now listening on: http://localhost:5198
+2024-11-12 20:25:07.859 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-12 20:25:07.863 -03:00 [INF] Hosting environment: Development
+2024-11-12 20:25:07.865 -03:00 [INF] Content root path: D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API
+2024-11-12 20:25:08.775 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/index.html - null null
+2024-11-12 20:25:09.072 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/index.html - 200 null text/html;charset=utf-8 305.3427ms
+2024-11-12 20:25:09.151 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_vs/browserLink - null null
+2024-11-12 20:25:09.151 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-12 20:25:09.203 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 51.8055ms
+2024-11-12 20:25:09.274 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 123.2068ms
+2024-11-12 20:25:09.428 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - null null
+2024-11-12 20:25:09.709 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 281.9316ms
+2024-11-12 20:25:15.065 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - null null
+2024-11-12 20:25:15.082 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 20:25:15.123 -03:00 [INF] Route matched with {action = "GetAllV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllV1(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:25:17.288 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 20:25:17.291 -03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-11-12 20:25:18.591 -03:00 [INF] Executed DbCommand (134ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[LastName], [u].[Name]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2024-11-12 20:25:18.694 -03:00 [INF] GetAllUsers returned: [{"Id":"9cd41af0-c2ab-4bc3-99a4-08dd036e31f8","Name":"nomeTeste3","LastName":"sobrenomeTeste3","Email":"email3@teste.com"},{"Id":"b21d8b6d-3242-4c5e-8fa9-c032a60a91a4","Name":"Paula","LastName":"Furlan","Email":"email@test.com"}]
+2024-11-12 20:25:18.711 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoApp.API.Model.V1.DTO.UserDto, ToDoApp.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-12 20:25:18.726 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API) in 3590.3264ms
+2024-11-12 20:25:18.731 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.GetAllV1 (ToDoApp.API)'
+2024-11-12 20:25:18.746 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/api/v1/Users?pageNumber=1&pageSize=1000 - 200 null application/json; charset=utf-8 3681.311ms
+2024-11-12 20:25:34.953 -03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7042/api/v1/Users/9cd41af0-c2ab-4bc3-99a4-08dd036e31f7 - null null
+2024-11-12 20:25:34.960 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.DeleteV1 (ToDoApp.API)'
+2024-11-12 20:25:34.967 -03:00 [INF] Route matched with {action = "DeleteV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteV1(System.Guid) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:25:35.066 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[LastName], [u].[Name]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-11-12 20:25:35.073 -03:00 [ERR] DeleteUser could not delete user with id: 9cd41af0-c2ab-4bc3-99a4-08dd036e31f7
+2024-11-12 20:25:35.075 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-11-12 20:25:35.090 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.DeleteV1 (ToDoApp.API) in 110.2336ms
+2024-11-12 20:25:35.093 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.DeleteV1 (ToDoApp.API)'
+2024-11-12 20:25:35.096 -03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7042/api/v1/Users/9cd41af0-c2ab-4bc3-99a4-08dd036e31f7 - 404 null application/problem+json; charset=utf-8 142.4025ms
+2024-11-12 20:25:51.799 -03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7042/api/v1/Users/9cd41af0-c2ab-4bc3-99a4-08dd036e31f8 - null null
+2024-11-12 20:25:51.806 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.UsersController.DeleteV1 (ToDoApp.API)'
+2024-11-12 20:25:51.809 -03:00 [INF] Route matched with {action = "DeleteV1", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteV1(System.Guid) on controller ToDoApp.API.Controllers.UsersController (ToDoApp.API).
+2024-11-12 20:25:51.907 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[LastName], [u].[Name]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2024-11-12 20:25:52.045 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Users]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-11-12 20:25:52.075 -03:00 [INF] DeleteUser deleted the user: {"Id":"9cd41af0-c2ab-4bc3-99a4-08dd036e31f8","Name":"nomeTeste3","LastName":"sobrenomeTeste3","Email":"email3@teste.com"}
+2024-11-12 20:25:52.078 -03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoApp.API.Model.V1.DTO.UserDto'.
+2024-11-12 20:25:52.080 -03:00 [INF] Executed action ToDoApp.API.Controllers.UsersController.DeleteV1 (ToDoApp.API) in 262.8935ms
+2024-11-12 20:25:52.084 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.UsersController.DeleteV1 (ToDoApp.API)'
+2024-11-12 20:25:52.087 -03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7042/api/v1/Users/9cd41af0-c2ab-4bc3-99a4-08dd036e31f8 - 200 null application/json; charset=utf-8 287.5958ms

@@ -144,3 +144,12 @@ D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Proje
 D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\AutoMapper.dll
+D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\Serilog.dll
+D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\bin\Debug\net8.0\Serilog.Sinks.File.dll

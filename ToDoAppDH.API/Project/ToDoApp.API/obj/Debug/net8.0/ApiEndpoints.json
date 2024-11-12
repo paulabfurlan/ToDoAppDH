@@ -38,8 +38,76 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [],
-    "EndpointName": "GetAllUsersV1"
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ToDoApp.API.Controllers.UsersController",
+    "Method": "CreateV1",
+    "RelativePath": "api/v1/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addUserRequestDto",
+        "Type": "ToDoApp.API.Model.V1.DTO.AddUserRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ToDoApp.API.Controllers.UsersController",
+    "Method": "GetByIdV1",
+    "RelativePath": "api/v1/Users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ToDoApp.API.Controllers.UsersController",
+    "Method": "UpdateV1",
+    "RelativePath": "api/v1/Users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateUserRequestDto",
+        "Type": "ToDoApp.API.Model.V1.DTO.UpdateUserRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ToDoApp.API.Controllers.UsersController",
+    "Method": "DeleteV1",
+    "RelativePath": "api/v1/Users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ToDoApp.API.Controllers.WeatherForecastController",

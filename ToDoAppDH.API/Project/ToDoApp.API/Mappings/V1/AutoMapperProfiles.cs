@@ -10,6 +10,8 @@ namespace ToDoApp.API.Mappings.V1
 		public AutoMapperProfiles()
 		{
 			CreateMap<User, UserDto>().ReverseMap();
+			CreateMap<User, AddUserRequestDto>().ReverseMap();
+			CreateMap<User, UpdateUserRequestDto>().ReverseMap();
 		}
 	}
 }
