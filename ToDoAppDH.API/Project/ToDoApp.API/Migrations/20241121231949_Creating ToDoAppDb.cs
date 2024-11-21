@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ToDoApp.API.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class CreatingToDoAppDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -46,6 +46,11 @@ namespace ToDoApp.API.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Email", "LastName", "Name" },
+                values: new object[] { new Guid("b21d8b6d-3242-4c5e-8fa9-c032a60a91a4"), "email@test.com", "Furlan", "Paula" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tasks_UserId",

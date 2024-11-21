@@ -17,12 +17,12 @@ namespace ToDoApp.API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("ProductVersion", "8.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ToDoApp.API.Model.Domain.Task", b =>
+            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.Task", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -52,7 +52,7 @@ namespace ToDoApp.API.Migrations
                     b.ToTable("Tasks");
                 });
 
-            modelBuilder.Entity("ToDoApp.API.Model.Domain.User", b =>
+            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -84,9 +84,9 @@ namespace ToDoApp.API.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ToDoApp.API.Model.Domain.Task", b =>
+            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.Task", b =>
                 {
-                    b.HasOne("ToDoApp.API.Model.Domain.User", "User")
+                    b.HasOne("ToDoApp.API.Model.V1.Domain.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
