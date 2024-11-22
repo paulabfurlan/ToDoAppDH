@@ -12,6 +12,9 @@ namespace ToDoApp.API.Mappings.V1
 			CreateMap<User, UserDto>().ReverseMap();
 			CreateMap<User, AddUserRequestDto>().ReverseMap();
 			CreateMap<User, UpdateUserRequestDto>().ReverseMap();
+			CreateMap<TaskTDApp, TaskDto>().ReverseMap();
+			CreateMap<TaskTDApp, AddTaskRequestDto>().ReverseMap();
+			CreateMap<TaskTDApp, UpdateTaskRequestDto>().ReverseMap();
 		}
 	}
 }

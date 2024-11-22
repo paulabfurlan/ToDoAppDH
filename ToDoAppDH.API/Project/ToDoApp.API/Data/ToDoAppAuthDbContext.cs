@@ -15,24 +15,24 @@ namespace ToDoApp.API.Data
 		{
 			base.OnModelCreating(builder);
 
-			var readerRoleId = "2caa5bda-8d59-484f-904d-76af4da108c3";
-			var writerRoleId = "78678386-95ec-49c6-b158-c91bdddd22ca";
+			var admRoleId = "2caa5bda-8d59-484f-904d-76af4da108c3";
+			var userRoleId = "78678386-95ec-49c6-b158-c91bdddd22ca";
 
 			var roles = new List<IdentityRole>
 			{
 				new IdentityRole
 				{
-					Id = readerRoleId,
-					ConcurrencyStamp = readerRoleId,
-					Name = "Reader",
-					NormalizedName = "Reader".ToUpper()
+					Id = admRoleId,
+					ConcurrencyStamp = admRoleId,
+					Name = "Adm",
+					NormalizedName = "Adm".ToUpper()
 				},
 				new IdentityRole
 				{
-					Id = writerRoleId,
-					ConcurrencyStamp = writerRoleId,
-					Name = "Writer",
-					NormalizedName = "Writer".ToUpper()
+					Id = userRoleId,
+					ConcurrencyStamp = userRoleId,
+					Name = "User",
+					NormalizedName = "User".ToUpper()
 				}
 			};
 

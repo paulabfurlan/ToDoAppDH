@@ -22,7 +22,7 @@ namespace ToDoApp.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.Task", b =>
+            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.TaskTDApp", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -84,7 +84,7 @@ namespace ToDoApp.API.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.Task", b =>
+            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.TaskTDApp", b =>
                 {
                     b.HasOne("ToDoApp.API.Model.V1.Domain.User", "User")
                         .WithMany()

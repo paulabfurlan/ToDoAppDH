@@ -12,8 +12,8 @@ using ToDoApp.API.Data;
 namespace ToDoApp.API.Migrations
 {
     [DbContext(typeof(ToDoAppDbContext))]
-    [Migration("20241121231949_Creating ToDoAppDb")]
-    partial class CreatingToDoAppDb
+    [Migration("20241122222022_Create ToDoAppDb")]
+    partial class CreateToDoAppDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace ToDoApp.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.Task", b =>
+            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.TaskTDApp", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -87,7 +87,7 @@ namespace ToDoApp.API.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.Task", b =>
+            modelBuilder.Entity("ToDoApp.API.Model.V1.Domain.TaskTDApp", b =>
                 {
                     b.HasOne("ToDoApp.API.Model.V1.Domain.User", "User")
                         .WithMany()

@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ToDoApp.API.Model.V1.Domain;
-using Task = ToDoApp.API.Model.V1.Domain.Task;
 
 namespace ToDoApp.API.Data
 {
@@ -12,7 +11,7 @@ namespace ToDoApp.API.Data
         }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<TaskTDApp> Tasks { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

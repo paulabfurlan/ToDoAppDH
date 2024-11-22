@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ToDoApp.API.Migrations
 {
     /// <inheritdoc />
-    public partial class CreatingToDoAppDb : Migration
+    public partial class CreateToDoAppDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

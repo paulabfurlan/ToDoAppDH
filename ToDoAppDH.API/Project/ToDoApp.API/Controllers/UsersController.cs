@@ -30,7 +30,7 @@ namespace ToDoApp.API.Controllers
 		// GET All Users
 		[MapToApiVersion("1.0")]
 		[HttpGet]
-		[Authorize]
+		[Authorize(Roles = "Adm")]
 		public async Task<IActionResult> GetAllV1([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
 			[FromQuery] string? sortBy, [FromQuery] bool? isAscending,
 			[FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 1000)
@@ -63,7 +63,7 @@ namespace ToDoApp.API.Controllers
 				return NotFound();
 			}
 
-			// Map/Convert Region Domain Model to Region DTO
+			// Map/Convert User Domain Model to User DTO
 			var userDto = mapper.Map<UserDto>(userDomain);
 
 			// Return DTO back to client
@@ -74,7 +74,7 @@ namespace ToDoApp.API.Controllers
 		// POST To Create new User
 		[HttpPost]
 		[ValidateModel]
-		[Authorize(Roles = "Writer")]
+		[Authorize]
 		public async Task<IActionResult> CreateV1([FromBody] AddUserRequestDto addUserRequestDto)
 		{
 			// Map or Convert DTO to Domain Model
@@ -94,7 +94,7 @@ namespace ToDoApp.API.Controllers
 		[HttpPut]
 		[Route("{id:Guid}")]
 		[ValidateModel]
-		[Authorize(Roles = "Writer")]
+		[Authorize]
 		public async Task<IActionResult> UpdateV1([FromRoute] Guid id, [FromBody] UpdateUserRequestDto updateUserRequestDto)
 		{
 			// Map DTO to Domain Model
@@ -119,7 +119,7 @@ namespace ToDoApp.API.Controllers
 		// Delete User
 		[HttpDelete]
 		[Route("{id:guid}")]
-		[Authorize(Roles = "Writer")]
+		[Authorize]
 		public async Task<IActionResult> DeleteV1([FromRoute] Guid id)
 		{
 			// Delete user if it exists

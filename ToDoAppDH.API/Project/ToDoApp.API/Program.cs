@@ -81,8 +81,9 @@ builder.Services.AddDbContext<ToDoAppAuthDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("ToDoAppAuthConnectionString")));
 
 // Inject the Repository dependencies
-builder.Services.AddScoped<IUserRepository, SQLUserRepository>();
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
+builder.Services.AddScoped<IUserRepository, SQLUserRepository>();
+builder.Services.AddScoped<ITaskRepository, SQLTaskRepository>();
 
 // Inject the AutoMapper dependencies
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));

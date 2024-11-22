@@ -12,8 +12,8 @@ using ToDoApp.API.Data;
 namespace ToDoApp.API.Migrations.ToDoAppAuthDb
 {
     [DbContext(typeof(ToDoAppAuthDbContext))]
-    [Migration("20241121235400_Creating ToDoAppAuthDb")]
-    partial class CreatingToDoAppAuthDb
+    [Migration("20241122220446_Create ToDoAppAuthDb")]
+    partial class CreateToDoAppAuthDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,15 +56,15 @@ namespace ToDoApp.API.Migrations.ToDoAppAuthDb
                         {
                             Id = "2caa5bda-8d59-484f-904d-76af4da108c3",
                             ConcurrencyStamp = "2caa5bda-8d59-484f-904d-76af4da108c3",
-                            Name = "Reader",
-                            NormalizedName = "READER"
+                            Name = "Adm",
+                            NormalizedName = "ADM"
                         },
                         new
                         {
                             Id = "78678386-95ec-49c6-b158-c91bdddd22ca",
                             ConcurrencyStamp = "78678386-95ec-49c6-b158-c91bdddd22ca",
-                            Name = "Writer",
-                            NormalizedName = "WRITER"
+                            Name = "User",
+                            NormalizedName = "USER"
                         });
                 });
 

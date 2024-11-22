@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ToDoApp.API.Migrations.ToDoAppAuthDb
 {
     /// <inheritdoc />
-    public partial class CreatingToDoAppAuthDb : Migration
+    public partial class CreateToDoAppAuthDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -163,8 +163,8 @@ namespace ToDoApp.API.Migrations.ToDoAppAuthDb
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "2caa5bda-8d59-484f-904d-76af4da108c3", "2caa5bda-8d59-484f-904d-76af4da108c3", "Reader", "READER" },
-                    { "78678386-95ec-49c6-b158-c91bdddd22ca", "78678386-95ec-49c6-b158-c91bdddd22ca", "Writer", "WRITER" }
+                    { "2caa5bda-8d59-484f-904d-76af4da108c3", "2caa5bda-8d59-484f-904d-76af4da108c3", "Adm", "ADM" },
+                    { "78678386-95ec-49c6-b158-c91bdddd22ca", "78678386-95ec-49c6-b158-c91bdddd22ca", "User", "USER" }
                 });
 
             migrationBuilder.CreateIndex(
