@@ -31,7 +31,7 @@ namespace Web_API_Versioning.API
         {
             var info = new OpenApiInfo
             {
-                Title = "Your versioned API",
+                Title = "To Do App API",
                 Version = description.ApiVersion.ToString(),
             };
 

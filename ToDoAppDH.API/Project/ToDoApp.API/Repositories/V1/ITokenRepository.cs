@@ -4,6 +4,6 @@ namespace ToDoApp.API.Repositories.V1
 {
     public interface ITokenRepository
     {
-        string CreateJWTToken(IdentityUser user, List<string> roles);
+        string CreateJWTToken(IdentityUser user, List<string> roles, double? expiration);
     }
 }

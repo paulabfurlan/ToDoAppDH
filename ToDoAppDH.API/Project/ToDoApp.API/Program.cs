@@ -26,26 +26,13 @@ builder.Logging.AddSerilog(logger);
 
 builder.Services.AddControllers();
 
-builder.Services.AddApiVersioning(options =>
-{
-	options.AssumeDefaultVersionWhenUnspecified = true;
-	options.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
-	options.ReportApiVersions = true;
-});
-
-builder.Services.AddVersionedApiExplorer(options =>
-{
-	options.GroupNameFormat = "'v'VVV";
-	options.SubstituteApiVersionInUrl = true;
-});
-
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
 	options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 
-	options.SwaggerDoc("v1", new OpenApiInfo { Title = "To Do App API", Version = "v1" });
+	options.SwaggerDoc("vS", new OpenApiInfo { Title = "To Do App API", Version = "vS" });
 	options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
 	{
 		Name = "Authorization",
@@ -73,6 +60,19 @@ builder.Services.AddSwaggerGen(options =>
 	});
 });
 builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
+
+builder.Services.AddApiVersioning(options =>
+{
+	options.AssumeDefaultVersionWhenUnspecified = true;
+	options.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+	options.ReportApiVersions = true;
+});
+
+builder.Services.AddVersionedApiExplorer(options =>
+{
+	options.GroupNameFormat = "'v'VVV";
+	options.SubstituteApiVersionInUrl = true;
+});
 
 // Inject the DB dependencies
 builder.Services.AddDbContext<ToDoAppDbContext>(options =>
