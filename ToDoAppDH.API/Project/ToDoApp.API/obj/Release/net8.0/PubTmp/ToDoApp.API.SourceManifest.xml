@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\obj\Release\net8.0\PubTmp\Out\" />
+  <dbfullsql path="D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\obj\Release\net8.0\PubTmp\EFSQLScripts\ToDoApp.API.Data.ToDoAppAuthDbContext.sql" />
+  <dbfullsql path="D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API\obj\Release\net8.0\PubTmp\EFSQLScripts\ToDoApp.API.Data.ToDoAppDbContext.sql" />
+</sitemanifest>

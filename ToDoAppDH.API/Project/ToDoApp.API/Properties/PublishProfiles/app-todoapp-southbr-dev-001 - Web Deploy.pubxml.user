@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>True|2024-11-23T22:21:59.9827306Z||;True|2024-11-23T19:14:58.0574579-03:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="ToDoApp.API.Data.ToDoAppAuthDbContext">
+      <Value>Data Source=sqlserver-todoapp-southbr-dev-001.database.windows.net,1433%3bInitial Catalog=sqldb-todoapp-southbr-dev-001%3bUser ID=paulabfurlan%3bPassword=Buffy%40656520</Value>
+    </EFMigrations>
+    <EFMigrations Include="ToDoApp.API.Data.ToDoAppDbContext">
+      <Value>Data Source=sqlserver-todoapp-southbr-dev-001.database.windows.net,1433%3bInitial Catalog=sqldb-todoapp-southbr-dev-001%3bUser ID=paulabfurlan%3bPassword=Buffy%40656520</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
