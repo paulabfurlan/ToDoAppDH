@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 using ToDoApp.API.Model.V1.DTO;
 using ToDoApp.API.Repositories.V1;
 
@@ -85,5 +88,27 @@ namespace NZWalks.API.Controllers
 
             return BadRequest("Username and/or password is incorrect");
         }
-    }
+
+		// Delete User
+		[HttpDelete]
+		[MapToApiVersion("1.0")]
+		[Route("Delete")]
+		[Authorize]
+		public async Task<IActionResult> DeleteV1([FromBody] DeleteAuthRequestDto deleteRequestDto)
+		{
+			var user = await userManager.FindByEmailAsync(deleteRequestDto.Username);
+
+            if (user != null)
+            {
+                var identityResult = await userManager.DeleteAsync(user);
+
+                if (identityResult.Succeeded)
+                {
+                    return Ok(user);
+                }
+            }
+
+			return BadRequest($"We couldn't delete the user {deleteRequestDto.Username}");
+		}
+	}
 }

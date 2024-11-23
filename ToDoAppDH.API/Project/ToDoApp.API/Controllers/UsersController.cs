@@ -72,6 +72,7 @@ namespace ToDoApp.API.Controllers
 		}
 
 		// POST To Create new User
+		[MapToApiVersion("1.0")]
 		[HttpPost]
 		[ValidateModel]
 		[Authorize]
@@ -91,6 +92,7 @@ namespace ToDoApp.API.Controllers
 		}
 
 		// Update User
+		[MapToApiVersion("1.0")]
 		[HttpPut]
 		[Route("{id:Guid}")]
 		[ValidateModel]
@@ -117,6 +119,7 @@ namespace ToDoApp.API.Controllers
 		}
 
 		// Delete User
+		[MapToApiVersion("1.0")]
 		[HttpDelete]
 		[Route("{id:guid}")]
 		[Authorize]

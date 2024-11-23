@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "NZWalks.API.Controllers.AuthController",
+    "Method": "DeleteV1",
+    "RelativePath": "api/v1/Auth/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteRequestDto",
+        "Type": "ToDoApp.API.Model.V1.DTO.DeleteAuthRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NZWalks.API.Controllers.AuthController",
     "Method": "LoginV1",
     "RelativePath": "api/v1/Auth/Login",
     "HttpMethod": "POST",
