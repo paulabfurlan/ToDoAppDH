@@ -6,7 +6,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
 <Project>
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <History>True|2024-11-23T22:21:59.9827306Z||;True|2024-11-23T19:14:58.0574579-03:00||;</History>
+    <History>True|2024-11-26T23:03:52.8816968Z||;True|2024-11-26T19:25:55.7726844-03:00||;True|2024-11-23T19:21:59.9827306-03:00||;True|2024-11-23T19:14:58.0574579-03:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>

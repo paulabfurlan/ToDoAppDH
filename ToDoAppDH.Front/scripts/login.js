@@ -6,8 +6,9 @@ let erroSenha = document.getElementById("erroSenha");
 
 let erroCampos = [true, true];
 
-// URL da API para Logar
-const apiLogin = "https://ctd-todo-api.herokuapp.com/v1/users/login";
+// API Login URLs
+const apiLogin = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Auth/Login";
+//const apiLogin = "https://localhost:7042/api/v1/Auth/Login";
 
 txtEmail.addEventListener("keyup", function () {
   let erros = true;
@@ -64,14 +65,16 @@ btnAcessar.addEventListener("click", function (event) {
 
   if (!btnAcessar.disabled) {
     let login = {
-      email: txtEmail.value,
-      password: txtSenha.value
+      username: txtEmail.value,
+      password: txtSenha.value,
+      expiration: 24
     };
 
     fetch(apiLogin, {
       method: "POST",
       headers: {
-        "Content-type": "application/json"
+        "Content-type": "application/json",
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify(login)
     })
@@ -79,9 +82,10 @@ btnAcessar.addEventListener("click", function (event) {
         return resposta.json();
       })
       .then(function (data) {
-        console.log(data);
-        if (data.jwt) {
-          sessionStorage.setItem("jwt", data.jwt);
+        if (data.jwtToken) {
+          sessionStorage.setItem("jwt", data.jwtToken);
+          console.log(sessionStorage.getItem("jwt"));
+          sessionStorage.setItem("email", txtEmail.value);
           window.location.href = "tarefas.html";
         } else {
           alert("Username and / or password is incorrect!");

@@ -13,8 +13,11 @@ let erroRepSenha = document.getElementById("erroRepSenha");
 
 let erroCampos = [true, true, true, true, true];
 
-// URL da API para Logar
-const apiCadastro = "https://ctd-todo-api.herokuapp.com/v1/users";
+// API URLs to register the new user
+const apiCadastro = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Auth/Register";
+//const apiCadastro = "https://localhost:7042/api/v1/Auth/Register";
+const apiUsuario = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Users";
+//const apiCadastro = "https://localhost:7042/api/v1/Users";
 
 txtNome.addEventListener("keyup", function () {
   let erros = true;
@@ -150,29 +153,47 @@ btnCriar.addEventListener("click", function (event) {
 
   if (!btnCriar.disabled) {
     let cadastro = {
-      firstName: txtNome.value,
+      username: txtEmail.value,
+      password: txtSenha.value,
+      roles: ["User", "Adm"]
+    };
+    let usuario = {
+      name: txtNome.value,
       lastName: txtSobrenome.value,
-      email: txtEmail.value,
-      password: txtSenha.value
+      email: txtEmail.value
     };
 
     fetch(apiCadastro, {
       method: "POST",
       headers: {
-        "Content-type": "application/json"
+        "Content-type": "application/json",
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify(cadastro)
     })
-      .then(function (resposta) {
-        return resposta.json();
-      })
-      .then(function (data) {
-        console.log(data);
-        if (data.jwt) window.location.href = "index.html";
-        else alert("Error while creating the new User!");
-      })
-      .catch(function (erro) {
-        console.log(erro);
-      });
+    .then(function (resposta) {
+      if(resposta.ok)
+      {
+        fetch(apiUsuario, {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+            'Access-Control-Allow-Origin': '*'
+          },
+          body: JSON.stringify(usuario)
+        })
+        .then(function (resposta2) {
+          if(resposta2.ok)
+            window.location.href = "index.html";
+          else
+            alert("Error while creating the new User!");
+        })
+        .catch(function (erro) {
+          console.log(erro);
+        });
+      }
+      else
+        alert("Error while creating the new User!");
+    });
   }
 });

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ namespace NZWalks.API.Controllers
 	[ApiController]
 	[ApiVersion("1.0")]
 	[Route("api/v{version:apiVersion}/[controller]")]
+    [EnableCors]
 	public class AuthController : ControllerBase
     {
         private readonly UserManager<IdentityUser> userManager;

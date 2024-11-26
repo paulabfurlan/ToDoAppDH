@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
@@ -13,6 +14,7 @@ namespace ToDoApp.API.Controllers
 	[ApiController]
 	[ApiVersion("1.0")]
 	[Route("api/v{version:apiVersion}/[controller]")]
+	[EnableCors]
 	public class TasksController : ControllerBase
 	{
 		private readonly ITaskRepository taskRepository;

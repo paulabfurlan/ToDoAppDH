@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,6 +15,7 @@ namespace ToDoApp.API.Controllers
 	[ApiController]
 	[ApiVersion("1.0")]
 	[Route("api/v{version:apiVersion}/[controller]")]
+	[EnableCors]
 	public class UsersController : ControllerBase
 	{
 		private readonly IUserRepository userRepository;
@@ -75,7 +77,6 @@ namespace ToDoApp.API.Controllers
 		[MapToApiVersion("1.0")]
 		[HttpPost]
 		[ValidateModel]
-		[Authorize]
 		public async Task<IActionResult> CreateV1([FromBody] AddUserRequestDto addUserRequestDto)
 		{
 			// Map or Convert DTO to Domain Model

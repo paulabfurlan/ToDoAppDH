@@ -121,6 +121,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
+app.UseCors(builder => builder
+	.AllowAnyOrigin()
+	.AllowAnyMethod()
+	.AllowAnyHeader());
+
 var versionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
 // Configure the HTTP request pipeline.

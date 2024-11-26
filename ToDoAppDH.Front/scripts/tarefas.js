@@ -4,26 +4,34 @@ let statusTask = document.getElementById("statusTask");
 let novaTarefa = document.getElementById("novaTarefa");
 let btnCriar = document.getElementById("btnCriar");
 
-// URL da API para pegar usuário
-const apiGetMe = "https://ctd-todo-api.herokuapp.com/v1/users/getMe";
+// API URL to get user
+const apiGetMe = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Users";
+//const apiGetMe = "https://localhost:7042/api/v1/Users";
 
-// URL para pegar as tarefas
-const apiTarefas = "https://ctd-todo-api.herokuapp.com/v1/tasks";
+// API URL to get the tasks
+const apiTarefas = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Tasks";
+//const apiTarefas = "https://localhost:7042/api/v1/Tasks";
 
 // Pegar usuario
 fetch(apiGetMe, {
   method: "GET",
   headers: {
     "Content-type": "application/json",
-    Authorization: sessionStorage.getItem("jwt")
+    "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
+    'Access-Control-Allow-Origin': '*'
   }
 })
   .then(function (resposta) {
     return resposta.json();
   })
   .then(function (data) {
-    if (data.firstName)
-      nomeUsu.innerText = data.firstName + " " + data.lastName;
+    data.forEach(function (user) {
+      if(user.email == sessionStorage.getItem("email"))
+      {
+        if (user.name)
+          nomeUsu.innerText = user.name + " " + user.lastName;
+      }
+    });
   })
   .catch(function (erro) {
     console.log(erro);
@@ -39,7 +47,8 @@ fetch(apiTarefas, {
   method: "GET",
   headers: {
     "Content-type": "application/json",
-    Authorization: sessionStorage.getItem("jwt")
+    "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
+    'Access-Control-Allow-Origin': '*'
   }
 })
   .then(function (resposta) {
@@ -114,7 +123,8 @@ fetch(apiTarefas, {
             method: "PUT",
             headers: {
               "Content-type": "application/json",
-              Authorization: sessionStorage.getItem("jwt")
+              "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
+              'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify(tarefa)
           })
@@ -142,7 +152,8 @@ fetch(apiTarefas, {
             method: "PUT",
             headers: {
               "Content-type": "application/json",
-              Authorization: sessionStorage.getItem("jwt")
+              "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
+              'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify(tarefa)
           })
@@ -167,7 +178,8 @@ fetch(apiTarefas, {
           method: "DELETE",
           headers: {
             "Content-type": "application/json",
-            Authorization: sessionStorage.getItem("jwt"),
+            "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
+            'Access-Control-Allow-Origin': '*'
           }
         })
           .then(function (resposta) {
@@ -205,7 +217,8 @@ btnCriar.addEventListener("click", function (event) {
       method: "POST",
       headers: {
         "Content-type": "application/json",
-        Authorization: sessionStorage.getItem("jwt")
+        "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify(tarefa)
     })
