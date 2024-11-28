@@ -32,8 +32,15 @@ a {
   width: 2em;
   border-radius: 50%;
   background-color: white;
-  opacity: 0.4;
+  opacity: 0.8;
   margin-left: 0.7em;
+}
+
+.user-image img{
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background-color: white;
 }
 
 #closeApp {
@@ -61,6 +68,11 @@ a {
   z-index: 20;
 }
 
+.novaTarefaDiv{
+  display: flex;
+  flex-direction: column;
+}
+
 .nova-tarefa input[type="text"] {
   border: none;
   flex: 1;
@@ -68,6 +80,17 @@ a {
   border-radius: 0;
   padding: 0.3em;
   font-size: 1.1em;
+}
+
+.novaTarefaDiv{
+  border: none;
+  flex: 1;
+  border-radius: 0;
+  padding: 0.3em;
+}
+
+.novaTarefaDiv span{
+  font-size: 0.8em;
 }
 
 .nova-tarefa input:focus {
@@ -282,6 +305,11 @@ a {
   background-color: white;
   padding: 1em 2em;
   box-shadow: 2px 2px 5px lightgrey;
+}
+
+.tarefa .timestamps{
+  display: flex;
+  flex-direction: column;
 }
 
 .tarefa .nome {

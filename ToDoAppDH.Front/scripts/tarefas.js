@@ -3,6 +3,7 @@ let closeApp = document.getElementById("closeApp");
 let statusTask = document.getElementById("statusTask");
 let novaTarefa = document.getElementById("novaTarefa");
 let btnCriar = document.getElementById("btnCriar");
+let spanChar = document.getElementById("numCaracteres");
 
 // API URL to get user
 const apiGetMe = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Users";
@@ -28,6 +29,7 @@ fetch(apiGetMe, {
     data.forEach(function (user) {
       if(user.email == sessionStorage.getItem("email"))
       {
+        sessionStorage.setItem("userId", user.id);
         if (user.name)
           nomeUsu.innerText = user.name + " " + user.lastName;
       }
@@ -69,8 +71,6 @@ fetch(apiTarefas, {
         testIni[0].id = "";
       }
 
-      const time = task.createdAt;
-
       let container;
       let path;
       let liTarefas = document.createElement("li");
@@ -87,23 +87,42 @@ fetch(apiTarefas, {
       liTarefas.appendChild(div);
 
       let div2 = document.createElement("div");
+      let div3 = document.createElement("div");
       let p = document.createElement("p");
       let p2 = document.createElement("p");
+      let p3 = document.createElement("p");
+      
       div2.classList.add("descricao");
       p.classList.add("nome");
       p.innerText = task.description;
-      p2.classList.add("timestamp");
-      p2.innerText = "Created in " + time.split("T")[0];
       div2.appendChild(p);
-      div2.appendChild(p2);
+
+      p2.classList.add("timestamp");
+      p2.innerText = "Created in " + task.createdAt;
+
+      if ((task.finishedAt != null) && (task.completed == true))
+      {
+        div3.classList.add("timestamps");
+        p3.classList.add("timestamp");
+        p3.innerText = "Finished at " + task.finishedAt;
+
+        div3.appendChild(p2);
+        div3.appendChild(p3);
+
+        div2.appendChild(div3);
+      }
+      else
+      {
+        div2.appendChild(p2);
+      }
 
       liTarefas.appendChild(div2);
 	  
-      let div3 = document.createElement("div");
-      div3.classList.add("not-done");
-      div3.classList.add("delete");
+      let div4 = document.createElement("div");
+      div4.classList.add("not-done");
+      div4.classList.add("delete");
 
-      liTarefas.appendChild(div3);
+      liTarefas.appendChild(div4);
 
       container[0].appendChild(liTarefas);
 
@@ -114,7 +133,10 @@ fetch(apiTarefas, {
 
           let tarefa = {
             description: task.description,
-            completed: true
+            createdAt: task.createdAt,
+            finishedAt: new Date().toLocaleDateString('en-US'),
+            completed: true,
+            userId: sessionStorage.getItem("userId")
           };
 
           path = apiTarefas + "/" + task.id;
@@ -143,7 +165,10 @@ fetch(apiTarefas, {
 
           let tarefa = {
             description: task.description,
-            completed: false
+            createdAt: task.createdAt,
+            finishedAt: null,
+            completed: false,
+            userId: sessionStorage.getItem("userId")
           };
 
           path = apiTarefas + "/" + task.id;
@@ -170,7 +195,7 @@ fetch(apiTarefas, {
       });
 	  
       // Deletar Tarefa
-      div3.addEventListener("click", function () {
+      div4.addEventListener("click", function () {
 
         path = apiTarefas + "/" + task.id;
 
@@ -207,10 +232,13 @@ btnCriar.addEventListener("click", function (event) {
     status = true;
   }
 
-  if (novaTarefa.value != "") {
+  if ((novaTarefa.value != "") && (novaTarefa.value.length <= 100))
+  {
     let tarefa = {
       description: novaTarefa.value,
-      completed: status
+      createdAt: new Date().toLocaleDateString('en-US'),
+      completed: status,
+      userId: sessionStorage.getItem("userId")
     };
 
     fetch(apiTarefas, {
@@ -231,7 +259,13 @@ btnCriar.addEventListener("click", function (event) {
       .catch(function (erro) {
         console.log(erro);
       });
-  } else {
+  } 
+  else if(novaTarefa.value.length > 100)
+  {
+    alert("Your task name needs to have no more than 100 characters!");
+  }
+  else
+  {
     alert("You need to give a name to your task!");
   }
 });
@@ -245,4 +279,9 @@ statusTask.addEventListener("click", function () {
     statusTask.classList.remove("done");
     statusTask.classList.add("not-done");
   }
+});
+
+// Listener de contagem de caracteres
+novaTarefa.addEventListener("keyup", function(){
+  spanChar.innerText = 100 - novaTarefa.value.length + " characters left";
 });
