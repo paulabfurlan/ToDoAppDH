@@ -319,6 +319,7 @@ a {
 .tarefa .timestamp {
   font-size: 0.9em;
   color: rgb(134, 134, 134);
+  margin: 0.1em;
 }
 
 
@@ -400,17 +401,35 @@ a {
     padding-right: 0;
   }
 
+  .nova-tarefa input[type="text"] {
+    font-size: 1.0em;
+  }
+
   .tarefas-pendentes {
     width: 100%;
     margin-right: 0;
     margin-left: 0;
   }
 
+  .tarefas-terminadas{
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   .tarefa .nome {
-    width: 65%;
+    width: 70%;
   }
   
-  .tarefa .timestamp {
-    width: 35%;
+  .tarefa .timestamps {
+    width: 30%;
+  }
+
+  .tarefa .timestamp{
+    font-size: 0.8em;
+  }
+
+  .descricao .nome{
+    font-size: 0.9em;
   }
 }

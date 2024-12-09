@@ -26,17 +26,30 @@ fetch(apiGetMe, {
     return resposta.json();
   })
   .then(function (data) {
+    let foundUser = false;
     data.forEach(function (user) {
       if(user.email == sessionStorage.getItem("email"))
       {
         sessionStorage.setItem("userId", user.id);
         if (user.name)
           nomeUsu.innerText = user.name + " " + user.lastName;
+        foundUser = true;
       }
     });
+    if(!foundUser)
+    {
+      alert("We ran into some problem, please login again");
+      sessionStorage.removeItem("jwt");
+      sessionStorage.removeItem("email");
+      window.location.href = "index.html";
+    }
   })
   .catch(function (erro) {
     console.log(erro);
+    alert("We ran into some problem, please login again");
+    sessionStorage.removeItem("jwt");
+    sessionStorage.removeItem("email");
+    window.location.href = "index.html";
   });
 
 // Botao de fechar sessao
@@ -57,14 +70,13 @@ fetch(apiTarefas, {
     return resposta.json();
   })
   .then(function (data) {
+    let userTasks = [];
     data.forEach(function (task) {
-    /*let task = {
-      id: 1,
-      createdAt: "16/09/2024",
-      description: "Tarefa de Teste",
-      completed: false
-    };*/
+      if(task.user.id == sessionStorage.getItem("userId"))
+        userTasks.push(task);
+    });
 
+    userTasks.forEach(function (task) {
       let testIni = document.getElementsByClassName("container");
       if (testIni[0].id == "skeleton") {
         testIni[0].innerHTML = "";
@@ -97,24 +109,19 @@ fetch(apiTarefas, {
       p.innerText = task.description;
       div2.appendChild(p);
 
+      div3.classList.add("timestamps");
       p2.classList.add("timestamp");
       p2.innerText = "Created in " + task.createdAt;
+      div3.appendChild(p2);
 
       if ((task.finishedAt != null) && (task.completed == true))
       {
-        div3.classList.add("timestamps");
         p3.classList.add("timestamp");
         p3.innerText = "Finished at " + task.finishedAt;
 
-        div3.appendChild(p2);
         div3.appendChild(p3);
-
-        div2.appendChild(div3);
       }
-      else
-      {
-        div2.appendChild(p2);
-      }
+      div2.appendChild(div3);
 
       liTarefas.appendChild(div2);
 	  
