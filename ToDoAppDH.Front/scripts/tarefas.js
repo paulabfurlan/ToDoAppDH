@@ -4,6 +4,8 @@ let statusTask = document.getElementById("statusTask");
 let novaTarefa = document.getElementById("novaTarefa");
 let btnCriar = document.getElementById("btnCriar");
 let spanChar = document.getElementById("numCaracteres");
+let loader = document.getElementById("loader");
+let body = document.getElementsByTagName("body")[0];
 
 // API URL to get user
 const apiGetMe = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Users";
@@ -12,6 +14,10 @@ const apiGetMe = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsou
 // API URL to get the tasks
 const apiTarefas = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Tasks";
 //const apiTarefas = "https://localhost:7042/api/v1/Tasks";
+
+loader.style.visibility = "visible";
+body.style.opacity = "0.5";
+let carregou = [false, false];
 
 // Pegar usuario
 fetch(apiGetMe, {
@@ -34,6 +40,12 @@ fetch(apiGetMe, {
         if (user.name)
           nomeUsu.innerText = user.name + " " + user.lastName;
         foundUser = true;
+        carregou[0] = true;
+        if (carregou[0] && carregou[1])
+        {
+          loader.style.visibility = "hidden";
+          body.style.opacity = "1";
+        }
       }
     });
     if(!foundUser)
@@ -55,6 +67,7 @@ fetch(apiGetMe, {
 // Botao de fechar sessao
 closeApp.addEventListener("click", function () {
   sessionStorage.removeItem("jwt");
+  sessionStorage.removeItem("email");
   window.location.href = "index.html";
 });
 
@@ -134,6 +147,9 @@ fetch(apiTarefas, {
       container[0].appendChild(liTarefas);
 
       div.addEventListener("click", function () {
+        loader.style.visibility = "visible";
+        body.style.opacity = "0.5";
+
         if (div.classList.contains("not-done")) {
           div.classList.remove("not-done");
           div.classList.add("done");
@@ -165,6 +181,9 @@ fetch(apiTarefas, {
             })
             .catch(function (erro) {
               console.log(erro);
+              alert("We ran into some problem, please try again");
+              loader.style.visibility = "hidden";
+              body.style.opacity = "1";
             });
         } else {
           div.classList.remove("done");
@@ -197,12 +216,17 @@ fetch(apiTarefas, {
             })
             .catch(function (erro) {
               console.log(erro);
+              alert("We ran into some problem, please try again");
+              loader.style.visibility = "hidden";
+              body.style.opacity = "1";
             });
         }
       });
 	  
       // Deletar Tarefa
       div4.addEventListener("click", function () {
+        loader.style.visibility = "visible";
+        body.style.opacity = "0.5";
 
         path = apiTarefas + "/" + task.id;
 
@@ -220,12 +244,25 @@ fetch(apiTarefas, {
           })
           .catch(function (erro) {
             console.log(erro);
+            alert("We ran into some problem, please try again");
+            loader.style.visibility = "hidden";
+            body.style.opacity = "1";
           });
       });
     });
+    carregou[1] = true;
+    if (carregou[0] && carregou[1])
+    {
+      loader.style.visibility = "hidden";
+      body.style.opacity = "1";
+    }
   })
   .catch(function (erro) {
     console.log(erro);
+    alert("We ran into some problem, please login again");
+    sessionStorage.removeItem("jwt");
+    sessionStorage.removeItem("email");
+    window.location.href = "index.html";
   });
 
 // Criar uma nova tarefa
@@ -241,6 +278,9 @@ btnCriar.addEventListener("click", function (event) {
 
   if ((novaTarefa.value != "") && (novaTarefa.value.length <= 100))
   {
+    loader.style.visibility = "visible";
+    body.style.opacity = "0.5";
+
     let tarefa = {
       description: novaTarefa.value,
       createdAt: new Date().toLocaleDateString('en-US'),
@@ -265,6 +305,9 @@ btnCriar.addEventListener("click", function (event) {
       })
       .catch(function (erro) {
         console.log(erro);
+        alert("We ran into some problem, please try again");
+        loader.style.visibility = "hidden";
+        body.style.opacity = "1";
       });
   } 
   else if(novaTarefa.value.length > 100)

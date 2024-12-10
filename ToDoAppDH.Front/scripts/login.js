@@ -3,12 +3,17 @@ let txtSenha = document.getElementById("txtSenha");
 let btnAcessar = document.getElementById("btnAcessar");
 let erroEmail = document.getElementById("erroEmail");
 let erroSenha = document.getElementById("erroSenha");
+let loader = document.getElementById("loader");
+let body = document.getElementsByTagName("body")[0];
 
 let erroCampos = [true, true];
 
 // API Login URLs
 const apiLogin = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Auth/Login";
 //const apiLogin = "https://localhost:7042/api/v1/Auth/Login";
+
+txtEmail.value = "";
+txtSenha.value = "";
 
 txtEmail.addEventListener("keyup", function () {
   let erros = true;
@@ -64,6 +69,9 @@ btnAcessar.addEventListener("click", function (event) {
   event.preventDefault();
 
   if (!btnAcessar.disabled) {
+    loader.style.visibility = "visible";
+    body.style.opacity = "0.5";
+
     let login = {
       username: txtEmail.value,
       password: txtSenha.value,
@@ -89,10 +97,15 @@ btnAcessar.addEventListener("click", function (event) {
           window.location.href = "tarefas.html";
         } else {
           alert("Username and / or password is incorrect!");
+          loader.style.visibility = "hidden";
+          body.style.opacity = "1";
         }
       })
       .catch(function (erro) {
+        loader.style.visibility = "hidden";
+        body.style.opacity = "1";
         console.log(erro);
+        alert("Username and / or password is incorrect!");
       });
   }
 });

@@ -10,6 +10,8 @@ let erroSobrenome = document.getElementById("erroSobrenome");
 let erroEmail = document.getElementById("erroEmail");
 let erroSenha = document.getElementById("erroSenha");
 let erroRepSenha = document.getElementById("erroRepSenha");
+let loader = document.getElementById("loader");
+let body = document.getElementsByTagName("body")[0];
 
 let erroCampos = [true, true, true, true, true];
 
@@ -152,6 +154,9 @@ btnCriar.addEventListener("click", function (event) {
   event.preventDefault();
 
   if (!btnCriar.disabled) {
+    loader.style.visibility = "visible";
+    body.style.opacity = "0.5";
+
     let cadastro = {
       username: txtEmail.value,
       password: txtSenha.value,
@@ -185,15 +190,30 @@ btnCriar.addEventListener("click", function (event) {
         .then(function (resposta2) {
           if(resposta2.ok)
             window.location.href = "index.html";
-          else
+          else{
             alert("Error while creating the new User!");
+            loader.style.visibility = "hidden";
+            body.style.opacity = "1";
+          }
         })
         .catch(function (erro) {
           console.log(erro);
+          alert("Error while creating the new User!");
+          loader.style.visibility = "hidden";
+          body.style.opacity = "1";
         });
       }
-      else
+      else{
         alert("Error while creating the new User!");
+        loader.style.visibility = "hidden";
+        body.style.opacity = "1";
+      }
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      alert("Error while creating the new User!");
+      loader.style.visibility = "hidden";
+      body.style.opacity = "1";
     });
   }
 });
