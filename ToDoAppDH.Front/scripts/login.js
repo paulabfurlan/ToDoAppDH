@@ -6,8 +6,6 @@ let erroSenha = document.getElementById("erroSenha");
 let loader = document.getElementById("loader");
 let body = document.getElementsByTagName("body")[0];
 
-let erroCampos = [true, true];
-
 // API Login URLs
 const apiLogin = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Auth/Login";
 //const apiLogin = "https://localhost:7042/api/v1/Auth/Login";
@@ -15,36 +13,26 @@ const apiLogin = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsou
 txtEmail.value = "";
 txtSenha.value = "";
 
-txtEmail.addEventListener("keyup", function () {
-  let erros = true;
-  let aux = 0;
-
-  if (txtEmail.value === "") {
-    if (!txtEmail.classList.contains("erro")) txtEmail.classList.add("erro");
+function testaEmail() {
+  if (txtEmail.value == "") {
+    if (!txtEmail.classList.contains("erro")) 
+      txtEmail.classList.add("erro");
     erroEmail.innerText = "Mandatory field!!";
   } else if (!(txtEmail.value.includes("@") && txtEmail.value.includes("."))) {
-    if (!txtEmail.classList.contains("erro")) txtEmail.classList.add("erro");
+    if (!txtEmail.classList.contains("erro")) 
+      txtEmail.classList.add("erro");
     erroEmail.innerText = "The e-mail address needs to be valid.";
   } else {
     txtEmail.classList.remove("erro");
     erroEmail.innerText = "";
-    erros = false;
+    return true;
   }
 
-  erroCampos[0] = erros;
+  return false;
+}
 
-  erroCampos.forEach(function (erro) {
-    if (!erro) aux++;
-  });
-  if (aux === erroCampos.length) btnAcessar.disabled = false;
-  else btnAcessar.disabled = true;
-});
-
-txtSenha.addEventListener("keyup", function () {
-  let erros = true;
-  let aux = 0;
-
-  if (txtSenha.value === "") {
+function testaSenha() {
+  if (txtSenha.value == "") {
     if (!txtSenha.classList.contains("erro")) txtSenha.classList.add("erro");
     erroSenha.innerText = "Mandatory field!!";
   } else if (txtSenha.value.length < 6) {
@@ -53,22 +41,19 @@ txtSenha.addEventListener("keyup", function () {
   } else {
     txtSenha.classList.remove("erro");
     erroSenha.innerText = "";
-    erros = false;
+    return true;
   }
 
-  erroCampos[1] = erros;
-
-  erroCampos.forEach(function (erro) {
-    if (!erro) aux++;
-  });
-  if (aux === erroCampos.length) btnAcessar.disabled = false;
-  else btnAcessar.disabled = true;
-});
+  return false;
+}
 
 btnAcessar.addEventListener("click", function (event) {
   event.preventDefault();
+  let teste1 = testaEmail();
+  let teste2 = testaSenha();
 
-  if (!btnAcessar.disabled) {
+  if(teste1 && teste2)
+  {
     loader.style.visibility = "visible";
     body.style.opacity = "0.5";
 
