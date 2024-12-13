@@ -58,7 +58,7 @@ btnAcessar.addEventListener("click", function (event) {
     body.style.opacity = "0.5";
 
     let login = {
-      username: txtEmail.value,
+      username: txtEmail.value.toLowerCase(),
       password: txtSenha.value,
       expiration: 24
     };
@@ -78,7 +78,7 @@ btnAcessar.addEventListener("click", function (event) {
         if (data.jwtToken) {
           sessionStorage.setItem("jwt", data.jwtToken);
           console.log(sessionStorage.getItem("jwt"));
-          sessionStorage.setItem("email", txtEmail.value);
+          sessionStorage.setItem("email", txtEmail.value.toLowerCase());
           window.location.href = "tarefas.html";
         } else {
           alert("Username and / or password is incorrect!");

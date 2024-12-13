@@ -158,14 +158,14 @@ btnCriar.addEventListener("click", function (event) {
     body.style.opacity = "0.5";
 
     let cadastro = {
-      username: txtEmail.value,
+      username: txtEmail.value.toLowerCase(),
       password: txtSenha.value,
       roles: ["User", "Adm"]
     };
     let usuario = {
       name: txtNome.value,
       lastName: txtSobrenome.value,
-      email: txtEmail.value
+      email: txtEmail.value.toLowerCase()
     };
 
     fetch(apiCadastro, {
