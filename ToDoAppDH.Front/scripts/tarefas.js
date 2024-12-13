@@ -1,5 +1,6 @@
 let nomeUsu = document.getElementById("nomeUsu");
 let closeApp = document.getElementById("closeApp");
+let removeAccount = document.getElementById("removeAccount");
 let statusTask = document.getElementById("statusTask");
 let novaTarefa = document.getElementById("novaTarefa");
 let btnCriar = document.getElementById("btnCriar");
@@ -15,9 +16,14 @@ const apiGetMe = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsou
 const apiTarefas = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Tasks";
 //const apiTarefas = "https://localhost:7042/api/v1/Tasks";
 
+// API URL to Authenticate
+const apiAuth = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Auth/Delete";
+//const apiTarefas = "https://localhost:7042/api/v1/Auth/Delete";
+
 loader.style.visibility = "visible";
 body.style.opacity = "0.5";
 let carregou = [false, false];
+let userTasks = [];
 
 // Pegar usuario
 fetch(apiGetMe, {
@@ -47,26 +53,109 @@ fetch(apiGetMe, {
     if(!foundUser)
     {
       alert("We ran into some problem, please login again");
-      sessionStorage.removeItem("jwt");
-      sessionStorage.removeItem("email");
+      removeStorage();
       window.location.href = "index.html";
     }
   })
   .catch(function (erro) {
     console.log(erro);
     alert("We ran into some problem, please login again");
-    sessionStorage.removeItem("jwt");
-    sessionStorage.removeItem("email");
+    removeStorage();
     window.location.href = "index.html";
   });
 
 // Botao de fechar sessao
 closeApp.addEventListener("click", function () {
-  sessionStorage.removeItem("jwt");
-  sessionStorage.removeItem("email");
+  removeStorage();
   window.location.href = "index.html";
 });
 
+// Botao de remover conta
+removeAccount.addEventListener("click", function () {
+  if(confirm("Please confirm that you want to remove your account and all your created tasks?"))
+  {
+    removerConta();
+  }
+});
+
+// Criar uma nova tarefa
+btnCriar.addEventListener("click", function (event) {
+  event.preventDefault();
+  let status;
+
+  if (statusTask.classList.contains("not-done")) {
+    status = false;
+  } else {
+    status = true;
+  }
+
+  if ((novaTarefa.value != "") && (novaTarefa.value.length <= 100))
+  {
+    loader.style.visibility = "visible";
+    body.style.opacity = "0.5";
+
+    let date = new Date();
+    let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
+    let month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(date);
+    let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
+    data = `${month}/${day}/${year}`;
+
+    let tarefa = {
+      description: novaTarefa.value,
+      createdAt: data,
+      completed: status,
+      userId: sessionStorage.getItem("userId")
+    };
+
+    fetch(apiTarefas, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+        "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify(tarefa)
+    })
+      .then(function (resposta) {
+        return resposta.json();
+      })
+      .then(function (data) {
+        if (data) document.location.reload(true);
+      })
+      .catch(function (erro) {
+        console.log(erro);
+        alert("We ran into some problem, please try again");
+        loader.style.visibility = "hidden";
+        body.style.opacity = "1";
+      });
+  } 
+  else if(novaTarefa.value.length > 100)
+  {
+    alert("Your task name needs to have no more than 100 characters!");
+  }
+  else
+  {
+    alert("You need to give a name to your task!");
+  }
+});
+
+// Listener do check de status da nova tarefa
+statusTask.addEventListener("click", function () {
+  if (statusTask.classList.contains("not-done")) {
+    statusTask.classList.remove("not-done");
+    statusTask.classList.add("done");
+  } else {
+    statusTask.classList.remove("done");
+    statusTask.classList.add("not-done");
+  }
+});
+
+// Listener de contagem de caracteres
+novaTarefa.addEventListener("keyup", function(){
+  spanChar.innerText = 100 - novaTarefa.value.length + " characters left";
+});
+
+// Funcoes
 function iniTarefas()
 {
   fetch(apiTarefas + "?sortBy=CreatedAt&isAscending=true", {
@@ -81,7 +170,6 @@ function iniTarefas()
       return resposta.json();
     })
     .then(function (data) {
-      let userTasks = [];
       data.forEach(function (task) {
         if(task.user.id == sessionStorage.getItem("userId"))
           userTasks.push(task);
@@ -265,85 +353,93 @@ function iniTarefas()
     .catch(function (erro) {
       console.log(erro);
       alert("We ran into some problem, please login again");
-      sessionStorage.removeItem("jwt");
-      sessionStorage.removeItem("email");
+      removeStorage();
       window.location.href = "index.html";
     });
 }
 
-// Criar uma nova tarefa
-btnCriar.addEventListener("click", function (event) {
-  event.preventDefault();
-  let status;
+function removerConta()
+{
+  loader.style.visibility = "visible";
+  body.style.opacity = "0.5";
 
-  if (statusTask.classList.contains("not-done")) {
-    status = false;
-  } else {
-    status = true;
-  }
-
-  if ((novaTarefa.value != "") && (novaTarefa.value.length <= 100))
-  {
-    loader.style.visibility = "visible";
-    body.style.opacity = "0.5";
-
-    let date = new Date();
-    let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
-    let month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(date);
-    let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
-    data = `${month}/${day}/${year}`;
-
-    let tarefa = {
-      description: novaTarefa.value,
-      createdAt: data,
-      completed: status,
-      userId: sessionStorage.getItem("userId")
-    };
-
-    fetch(apiTarefas, {
-      method: "POST",
+  let path;
+  let countTasks = 0;
+  // Deleta todas as tasks
+  userTasks.forEach(function (task) {
+    path = apiTarefas + "/" + task.id;
+  
+    fetch(path, {
+      method: "DELETE",
       headers: {
         "Content-type": "application/json",
         "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
         'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify(tarefa)
+      }
     })
       .then(function (resposta) {
+        countTasks++;
         return resposta.json();
-      })
-      .then(function (data) {
-        if (data) document.location.reload(true);
       })
       .catch(function (erro) {
         console.log(erro);
         alert("We ran into some problem, please try again");
-        loader.style.visibility = "hidden";
-        body.style.opacity = "1";
+        document.location.reload(true);
       });
-  } 
-  else if(novaTarefa.value.length > 100)
-  {
-    alert("Your task name needs to have no more than 100 characters!");
-  }
-  else
-  {
-    alert("You need to give a name to your task!");
-  }
-});
+  });
 
-// Listener do check de status da nova tarefa
-statusTask.addEventListener("click", function () {
-  if (statusTask.classList.contains("not-done")) {
-    statusTask.classList.remove("not-done");
-    statusTask.classList.add("done");
-  } else {
-    statusTask.classList.remove("done");
-    statusTask.classList.add("not-done");
-  }
-});
+  if(countTasks == userTasks.length)
+    console.log("Deleted all tasks!");
 
-// Listener de contagem de caracteres
-novaTarefa.addEventListener("keyup", function(){
-  spanChar.innerText = 100 - novaTarefa.value.length + " characters left";
-});
+  // Delete User Data
+  path = apiGetMe + "/" + sessionStorage.getItem("userId");
+
+  fetch(path, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json",
+      "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
+      'Access-Control-Allow-Origin': '*'
+    }
+  })
+    .then(function (resposta) {
+      console.log("Deleted the User data!");
+      return resposta.json();
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      alert("We ran into some problem, please try again");
+      document.location.reload(true);
+    });
+
+  // Delete the user account
+  let userDelete = {
+    username: sessionStorage.getItem("email")
+  };
+
+  fetch(apiAuth, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json",
+      "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
+      'Access-Control-Allow-Origin': '*'
+    },
+    body: JSON.stringify(userDelete)
+  })
+    .then(function (resposta) {
+      alert("The User Account was successfully deleted!");
+      removeStorage();
+      window.location.href = "index.html";
+    })
+    .catch(function (erro) {
+      removeStorage();
+      window.location.href = "index.html";
+    });
+}
+
+function removeStorage()
+{
+  sessionStorage.removeItem("jwt");
+  sessionStorage.removeItem("email");
+  sessionStorage.removeItem("userId");
+}

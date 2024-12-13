@@ -45,7 +45,17 @@ a {
 
 #closeApp {
   margin-left: 15px;
-  font-size: 0.7em;
+  font-size: 0.8em;
+  background-color: rgb(218, 88, 88);
+  color: white;
+  border-radius: 50vh;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#removeAccount {
+  margin-left: 15px;
+  font-size: 0.8em;
   background-color: rgb(218, 88, 88);
   color: white;
   border-radius: 50vh;
@@ -431,5 +441,18 @@ a {
 
   .descricao .nome{
     font-size: 0.9em;
+  }
+
+  #closeApp {
+    margin-left: 0.8em;
+    padding: 0.2em 0.2em 0.2em 0.8em;
+    max-width: 4.2em;
+  }
+  
+  #removeAccount {
+    margin-left: 0.8em;
+    margin-right: 0.4em;
+    padding: 0.2em 0.2em 0.2em 0.8em;
+    max-width: 4.2em;
   }
 }
