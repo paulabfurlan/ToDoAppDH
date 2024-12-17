@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|d:\\onedrive\\documents\\portif\u00F3lio\\to do app\\github\\todoappdh\\todoappdh.api\\project\\todoapp.api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|d:\\onedrive\\documents\\portif\u00F3lio\\to do app\\github\\todoappdh\\todoappdh.api\\project\\todoapp.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|d:\\onedrive\\documents\\portif\u00F3lio\\to do app\\github\\todoappdh\\todoappdh.api\\project\\todoapp.api\\model\\v1\\dto\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|solutionrelative:model\\v1\\dto\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|d:\\onedrive\\documents\\portif\u00F3lio\\to do app\\github\\todoappdh\\todoappdh.api\\project\\todoapp.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|d:\\onedrive\\documents\\portif\u00F3lio\\to do app\\github\\todoappdh\\todoappdh.api\\project\\todoapp.api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|d:\\onedrive\\documents\\portif\u00F3lio\\to do app\\github\\todoappdh\\todoappdh.api\\project\\todoapp.api\\model\\v1\\dto\\adduserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|d:\\onedrive\\documents\\portif\u00F3lio\\to do app\\github\\todoappdh\\todoappdh.api\\project\\todoapp.api\\model\\v1\\dto\\deleteauthrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|solutionrelative:model\\v1\\dto\\deleteauthrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|d:\\onedrive\\documents\\portif\u00F3lio\\to do app\\github\\todoappdh\\todoappdh.api\\project\\todoapp.api\\model\\v1\\dto\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|solutionrelative:model\\v1\\dto\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51307BC1-F9E8-4A04-B092-AEDE32C727A6}|ToDoApp.API.csproj|d:\\onedrive\\documents\\portif\u00F3lio\\to do app\\github\\todoappdh\\todoappdh.api\\project\\todoapp.api\\model\\v1\\dto\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -162,11 +162,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "TasksController.cs",
               "DocumentMoniker": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Controllers\\TasksController.cs",
               "RelativeDocumentMoniker": "Controllers\\TasksController.cs",
@@ -174,18 +174,17 @@
               "RelativeToolTip": "Controllers\\TasksController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T21:29:16.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T21:29:16.099Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAowBEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T23:00:49.745Z",
               "EditorCaption": ""
@@ -198,22 +197,9 @@
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
               "ToolTip": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwA4AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T20:09:22.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ITaskRepository.cs",
-              "DocumentMoniker": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Repositories\\V1\\ITaskRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\V1\\ITaskRepository.cs",
-              "ToolTip": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Repositories\\V1\\ITaskRepository.cs",
-              "RelativeToolTip": "Repositories\\V1\\ITaskRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T21:31:41.114Z"
+              "WhenOpened": "2024-11-22T20:09:22.124Z"
             },
             {
               "$type": "Document",
@@ -230,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AddUserRequestDto.cs",
               "DocumentMoniker": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Model\\V1\\DTO\\AddUserRequestDto.cs",
               "RelativeDocumentMoniker": "Model\\V1\\DTO\\AddUserRequestDto.cs",
@@ -249,14 +235,14 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAAH4AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T22:48:47.344Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DeleteAuthRequestDto.cs",
               "DocumentMoniker": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Model\\V1\\DTO\\DeleteAuthRequestDto.cs",
               "RelativeDocumentMoniker": "Model\\V1\\DTO\\DeleteAuthRequestDto.cs",
@@ -282,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "LoginRequestDto.cs",
               "DocumentMoniker": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Model\\V1\\DTO\\LoginRequestDto.cs",
               "RelativeDocumentMoniker": "Model\\V1\\DTO\\LoginRequestDto.cs",
@@ -292,6 +278,18 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T20:13:59.38Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Repositories\\V1\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\V1\\ITaskRepository.cs",
+              "ToolTip": "D:\\OneDrive\\Documents\\Portif\u00F3lio\\To Do App\\github\\ToDoAppDH\\ToDoAppDH.API\\Project\\ToDoApp.API\\Repositories\\V1\\ITaskRepository.cs",
+              "RelativeToolTip": "Repositories\\V1\\ITaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T21:31:41.114Z"
             },
             {
               "$type": "Document",

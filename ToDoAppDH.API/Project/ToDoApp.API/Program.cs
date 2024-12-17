@@ -12,9 +12,21 @@ using ToDoApp.API.Middlewares;
 using ToDoApp.API.Repositories.V1;
 using Web_API_Versioning.API;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddCors(options =>
+{
+	options.AddPolicy(name: MyAllowSpecificOrigins,
+					  policy =>
+					  {
+						  policy.WithOrigins("https://polite-mud-012e51a0f.4.azurestaticapps.net")
+								.AllowAnyHeader()
+								.AllowAnyMethod();
+					  });
+});
 
 var logger = new LoggerConfiguration()
 	.WriteTo.Console()
@@ -121,10 +133,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
-app.UseCors(builder => builder
+/*app.UseCors(builder => builder
 	.AllowAnyOrigin()
 	.AllowAnyMethod()
-	.AllowAnyHeader());
+	.AllowAnyHeader());*/
+
+app.UseCors(MyAllowSpecificOrigins);
 
 var versionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
