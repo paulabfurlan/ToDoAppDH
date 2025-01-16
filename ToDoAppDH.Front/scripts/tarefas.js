@@ -9,15 +9,15 @@ let loader = document.getElementById("loader");
 let body = document.getElementsByTagName("body")[0];
 
 // API URL to get user
-const apiGetMe = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Users";
+const apiGetMe = "https://app-todoapp-southbr-dev-002-buf5ape8h4eqc6fh.brazilsouth-01.azurewebsites.net/api/v1/Users";
 //const apiGetMe = "https://localhost:7042/api/v1/Users";
 
 // API URL to get the tasks
-const apiTarefas = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Tasks";
+const apiTarefas = "https://app-todoapp-southbr-dev-002-buf5ape8h4eqc6fh.brazilsouth-01.azurewebsites.net/api/v1/Tasks";
 //const apiTarefas = "https://localhost:7042/api/v1/Tasks";
 
 // API URL to Authenticate
-const apiAuth = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Auth/Delete";
+const apiAuth = "https://app-todoapp-southbr-dev-002-buf5ape8h4eqc6fh.brazilsouth-01.azurewebsites.net/api/v1/Auth/Delete";
 //const apiTarefas = "https://localhost:7042/api/v1/Auth/Delete";
 
 loader.style.visibility = "visible";

@@ -16,9 +16,9 @@ let body = document.getElementsByTagName("body")[0];
 let erroCampos = [true, true, true, true, true];
 
 // API URLs to register the new user
-const apiCadastro = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Auth/Register";
+const apiCadastro = "https://app-todoapp-southbr-dev-002-buf5ape8h4eqc6fh.brazilsouth-01.azurewebsites.net/api/v1/Auth/Register";
 //const apiCadastro = "https://localhost:7042/api/v1/Auth/Register";
-const apiUsuario = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Users";
+const apiUsuario = "https://app-todoapp-southbr-dev-002-buf5ape8h4eqc6fh.brazilsouth-01.azurewebsites.net/api/v1/Users";
 //const apiCadastro = "https://localhost:7042/api/v1/Users";
 
 txtNome.addEventListener("keyup", function () {

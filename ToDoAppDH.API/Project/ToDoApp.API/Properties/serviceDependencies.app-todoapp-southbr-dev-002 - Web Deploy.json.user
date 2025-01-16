@@ -1,0 +1,48 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2025-01-16T23:01:46.6183282Z"
+    },
+    "apis1": {
+      "restored": true,
+      "restoreTime": "2025-01-16T22:58:54.5274621Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2025-01-16T23:02:45.1923298Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "7239327c-dc74-49a5-88b5-d91a0a218f46"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg-todoapp-southus-dev-002"
+    },
+    "mssql2.resourceGroupName": {
+      "Name": "mssql2.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg-todoapp-southus-dev-002"
+    },
+    "mssql2.subscriptionId": {
+      "Name": "mssql2.subscriptionId",
+      "Type": "subscription",
+      "Value": "7239327c-dc74-49a5-88b5-d91a0a218f46"
+    },
+    "apis1.resourceGroupName": {
+      "Name": "apis1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg-todoapp-southus-dev-002"
+    },
+    "apis1.subscriptionId": {
+      "Name": "apis1.subscriptionId",
+      "Type": "subscription",
+      "Value": "7239327c-dc74-49a5-88b5-d91a0a218f46"
+    }
+  }
+}

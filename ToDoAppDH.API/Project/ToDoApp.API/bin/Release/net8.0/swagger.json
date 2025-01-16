@@ -1,0 +1,554 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "To Do App API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/v1/Auth/Register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/RegisterRequestDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/Auth/Login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/LoginRequestDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/Auth/Delete": {
+      "delete": {
+        "tags": [
+          "Auth"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/DeleteAuthRequestDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/Tasks": {
+      "get": {
+        "tags": [
+          "Tasks"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filterOn",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "filterQuery",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "sortBy",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "isAscending",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "pageNumber",
+            "type": "integer",
+            "format": "int32",
+            "default": 1
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "type": "integer",
+            "format": "int32",
+            "default": 1000
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AddTaskRequestDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/Tasks/{id}": {
+      "get": {
+        "tags": [
+          "Tasks"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Tasks"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateTaskRequestDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Tasks"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/Users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filterOn",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "filterQuery",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "sortBy",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "isAscending",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "pageNumber",
+            "type": "integer",
+            "format": "int32",
+            "default": 1
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "type": "integer",
+            "format": "int32",
+            "default": 1000
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AddUserRequestDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/Users/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateUserRequestDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AddTaskRequestDto": {
+      "required": [
+        "completed",
+        "createdAt",
+        "description",
+        "userId"
+      ],
+      "type": "object",
+      "properties": {
+        "description": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        },
+        "createdAt": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "finishedAt": {
+          "type": "string"
+        },
+        "completed": {
+          "type": "boolean"
+        },
+        "userId": {
+          "format": "uuid",
+          "type": "string"
+        }
+      }
+    },
+    "AddUserRequestDto": {
+      "required": [
+        "email",
+        "lastName",
+        "name"
+      ],
+      "type": "object",
+      "properties": {
+        "name": {
+          "minLength": 2,
+          "type": "string"
+        },
+        "lastName": {
+          "minLength": 2,
+          "type": "string"
+        },
+        "email": {
+          "minLength": 1,
+          "pattern": ".+\\@.+\\..+",
+          "type": "string"
+        }
+      }
+    },
+    "DeleteAuthRequestDto": {
+      "required": [
+        "username"
+      ],
+      "type": "object",
+      "properties": {
+        "username": {
+          "format": "email",
+          "minLength": 1,
+          "type": "string"
+        }
+      }
+    },
+    "LoginRequestDto": {
+      "required": [
+        "password",
+        "username"
+      ],
+      "type": "object",
+      "properties": {
+        "username": {
+          "format": "email",
+          "minLength": 1,
+          "type": "string"
+        },
+        "password": {
+          "format": "password",
+          "minLength": 1,
+          "type": "string"
+        },
+        "expiration": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "RegisterRequestDto": {
+      "required": [
+        "password",
+        "username"
+      ],
+      "type": "object",
+      "properties": {
+        "username": {
+          "format": "email",
+          "minLength": 1,
+          "type": "string"
+        },
+        "password": {
+          "format": "password",
+          "minLength": 1,
+          "type": "string"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "UpdateTaskRequestDto": {
+      "required": [
+        "completed",
+        "createdAt",
+        "description",
+        "userId"
+      ],
+      "type": "object",
+      "properties": {
+        "description": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        },
+        "createdAt": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "finishedAt": {
+          "type": "string"
+        },
+        "completed": {
+          "type": "boolean"
+        },
+        "userId": {
+          "format": "uuid",
+          "type": "string"
+        }
+      }
+    },
+    "UpdateUserRequestDto": {
+      "required": [
+        "email",
+        "lastName",
+        "name"
+      ],
+      "type": "object",
+      "properties": {
+        "name": {
+          "minLength": 2,
+          "type": "string"
+        },
+        "lastName": {
+          "minLength": 2,
+          "type": "string"
+        },
+        "email": {
+          "minLength": 1,
+          "pattern": ".+\\@.+\\..+",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

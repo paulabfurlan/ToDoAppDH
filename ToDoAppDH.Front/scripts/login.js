@@ -7,7 +7,7 @@ let loader = document.getElementById("loader");
 let body = document.getElementsByTagName("body")[0];
 
 // API Login URLs
-const apiLogin = "https://app-todoapp-southbr-dev-001-dxfbhwbufagvdcez.brazilsouth-01.azurewebsites.net/api/v1/Auth/Login";
+const apiLogin = "https://app-todoapp-southbr-dev-002-buf5ape8h4eqc6fh.brazilsouth-01.azurewebsites.net/api/v1/Auth/Login";
 //const apiLogin = "https://localhost:7042/api/v1/Auth/Login";
 
 txtEmail.value = "";

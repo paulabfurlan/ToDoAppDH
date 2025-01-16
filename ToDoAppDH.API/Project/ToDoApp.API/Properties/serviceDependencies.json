@@ -1,13 +1,16 @@
 {
   "dependencies": {
-    "mssql1": {
-      "type": "mssql",
-      "connectionId": "ConnectionStrings:ToDoAppAuthConnectionString",
-      "dynamicId": null
+    "apis1": {
+      "type": "apis"
     },
     "mssql2": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:ToDoAppConnectionString",
+      "dynamicId": null
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:ToDoAppAuthConnectionString",
       "dynamicId": null
     }
   }

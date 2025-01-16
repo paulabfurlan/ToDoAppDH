@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="app-todoapp-southbr-dev-001" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="app-todoapp-southbr-dev-002" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\OneDrive\\Documents\\Portifólio\\To\ Do\ App\\github\\ToDoAppDH\\ToDoAppDH\.API\\Project\\ToDoApp\.API\\obj\\Release\\net8\.0\\PubTmp\\Out\\$" />
   </parameter>
-  <parameter name="ToDoApp.API.Data.ToDoAppAuthDbContext" description="" value="Data Source=sqlserver-todoapp-southbr-dev-001.database.windows.net,1433;Initial Catalog=sqldb-todoapp-southbr-dev-001;User ID=paulabfurlan;Password=Buffy@656520" tags="dbfullsql">
+  <parameter name="ToDoApp.API.Data.ToDoAppAuthDbContext" description="" value="Data Source=sqlserver-todoapp-southbr-dev-002.database.windows.net,1433;Initial Catalog=sqldb-todoapp-southbr-dev-002;User ID=paulabfurlan;Password=Buffy@656520" tags="dbfullsql">
     <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\OneDrive\\Documents\\Portifólio\\To\ Do\ App\\github\\ToDoAppDH\\ToDoAppDH\.API\\Project\\ToDoApp\.API\\obj\\Release\\net8\.0\\PubTmp\\EFSQLScripts\\ToDoApp\.API\.Data\.ToDoAppAuthDbContext\.sql$" />
   </parameter>
-  <parameter name="ToDoApp.API.Data.ToDoAppDbContext" description="" value="Data Source=sqlserver-todoapp-southbr-dev-001.database.windows.net,1433;Initial Catalog=sqldb-todoapp-southbr-dev-001;User ID=paulabfurlan;Password=Buffy@656520" tags="dbfullsql">
+  <parameter name="ToDoApp.API.Data.ToDoAppDbContext" description="" value="Data Source=sqlserver-todoapp-southbr-dev-002.database.windows.net,1433;Initial Catalog=sqldb-todoapp-southbr-dev-002;User ID=paulabfurlan;Password=Buffy@656520" tags="dbfullsql">
     <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\OneDrive\\Documents\\Portifólio\\To\ Do\ App\\github\\ToDoAppDH\\ToDoAppDH\.API\\Project\\ToDoApp\.API\\obj\\Release\\net8\.0\\PubTmp\\EFSQLScripts\\ToDoApp\.API\.Data\.ToDoAppDbContext\.sql$" />
   </parameter>
 </parameters>

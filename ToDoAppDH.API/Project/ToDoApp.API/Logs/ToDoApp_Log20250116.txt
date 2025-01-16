@@ -1,0 +1,5 @@
+2025-01-16 20:03:48.856 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-16 20:03:48.927 -03:00 [INF] Creating key {f2a8e272-696a-49e4-b333-45b9b484d3ed} with creation date 2025-01-16 23:03:48Z, activation date 2025-01-16 23:03:48Z, and expiration date 2025-04-16 23:03:48Z.
+2025-01-16 20:03:48.937 -03:00 [INF] Writing data to file 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys\key-f2a8e272-696a-49e4-b333-45b9b484d3ed.xml'.
+2025-01-16 20:08:11.742 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-16 20:28:48.038 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
