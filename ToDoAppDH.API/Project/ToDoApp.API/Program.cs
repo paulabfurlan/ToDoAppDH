@@ -22,8 +22,8 @@ builder.Services.AddCors(options =>
 	options.AddPolicy(name: MyAllowSpecificOrigins,
 					  policy =>
 					  {
-						  policy.AllowAnyOrigin()
-						        //.WithOrigins("https://ambitious-wave-05ec9f90f.4.azurestaticapps.net/")
+						  policy//.AllowAnyOrigin()
+						        .WithOrigins("https://ambitious-wave-05ec9f90f.4.azurestaticapps.net/")
 								//.WithOrigins("https://polite-mud-012e51a0f.4.azurestaticapps.net")
 								.AllowAnyHeader()
 								.AllowAnyMethod();
@@ -135,12 +135,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
-/*app.UseCors(builder => builder
+app.UseCors(builder => builder
 	.AllowAnyOrigin()
 	.AllowAnyMethod()
-	.AllowAnyHeader());*/
+	.AllowAnyHeader());
 
-app.UseCors(MyAllowSpecificOrigins);
+//app.UseCors(MyAllowSpecificOrigins);
 
 var versionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
