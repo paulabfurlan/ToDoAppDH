@@ -73,7 +73,7 @@ btnAcessar.addEventListener("click", function (event) {
       mode: "no-cors"
     })
       .then(function (resposta) {
-        console.log("I'm here");
+        console.log(resposta);
         return resposta.json();
       })
       .then(function (data) {
