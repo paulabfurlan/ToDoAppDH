@@ -76,6 +76,7 @@ btnAcessar.addEventListener("click", function (event) {
         return resposta.json();
       })
       .then(function (data) {
+        console.log("I'm here");
         if (data.jwtToken) {
           sessionStorage.setItem("jwt", data.jwtToken);
           console.log(sessionStorage.getItem("jwt"));
