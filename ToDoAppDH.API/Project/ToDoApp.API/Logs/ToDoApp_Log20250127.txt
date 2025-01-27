@@ -1,0 +1,2 @@
+2025-01-27 19:20:03.520 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-27 19:35:40.537 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
