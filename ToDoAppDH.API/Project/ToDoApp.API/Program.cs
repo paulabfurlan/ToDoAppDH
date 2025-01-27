@@ -22,8 +22,14 @@ builder.Services.AddCors(options =>
 	options.AddPolicy(name: MyAllowSpecificOrigins,
 					  policy =>
 					  {
-						  policy.WithOrigins("https://ambitious-wave-05ec9f90f.4.azurestaticapps.net/",
-											 "https://paulabfurlan.github.io/")
+						  policy.WithOrigins("https://ambitious-wave-05ec9f90f.4.azurestaticapps.net",
+											 "https://ambitious-wave-05ec9f90f.4.azurestaticapps.net/index.html",
+											 "https://ambitious-wave-05ec9f90f.4.azurestaticapps.net/signup.html",
+											 "https://ambitious-wave-05ec9f90f.4.azurestaticapps.net/tarefas.html",
+											 "https://paulabfurlan.github.io",
+											 "https://paulabfurlan.github.io/index.html",
+											 "https://paulabfurlan.github.io/signup.html",
+											 "https://paulabfurlan.github.io/tarefas.html")
 								.AllowAnyHeader()
 								.AllowAnyMethod();
 					  });

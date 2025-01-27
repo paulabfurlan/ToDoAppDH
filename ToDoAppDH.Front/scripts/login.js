@@ -66,18 +66,15 @@ btnAcessar.addEventListener("click", function (event) {
     fetch(apiLogin, {
       method: "POST",
       headers: {
-        "Content-type": "application/json",
-        'Access-Control-Allow-Origin': '*'
+        "Content-type": "application/json"
       },
       body: JSON.stringify(login),
-      mode: "no-cors"
+      mode: "cors"
     })
       .then(function (resposta) {
-        console.log(resposta);
         return resposta.json();
       })
       .then(function (data) {
-        console.log("I'm here 2");
         if (data.jwtToken) {
           sessionStorage.setItem("jwt", data.jwtToken);
           console.log(sessionStorage.getItem("jwt"));
@@ -90,7 +87,6 @@ btnAcessar.addEventListener("click", function (event) {
         }
       })
       .catch(function (erro) {
-        console.log("I'm here 3");
         loader.style.visibility = "hidden";
         body.style.opacity = "1";
         console.log(erro);

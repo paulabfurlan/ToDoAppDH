@@ -8,7 +8,7 @@ using System.Text.Json;
 using ToDoApp.API.Model.V1.DTO;
 using ToDoApp.API.Repositories.V1;
 
-namespace NZWalks.API.Controllers
+namespace ToDoApp.API.Controllers
 {
 	[ApiController]
 	[ApiVersion("1.0")]

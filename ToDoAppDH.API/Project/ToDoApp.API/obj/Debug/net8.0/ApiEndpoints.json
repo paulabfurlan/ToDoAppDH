@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "NZWalks.API.Controllers.AuthController",
+    "ContainingType": "ToDoApp.API.Controllers.AuthController",
     "Method": "DeleteV1",
     "RelativePath": "api/v1/Auth/Delete",
     "HttpMethod": "DELETE",
@@ -16,7 +16,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "NZWalks.API.Controllers.AuthController",
+    "ContainingType": "ToDoApp.API.Controllers.AuthController",
     "Method": "LoginV1",
     "RelativePath": "api/v1/Auth/Login",
     "HttpMethod": "POST",
@@ -32,7 +32,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "NZWalks.API.Controllers.AuthController",
+    "ContainingType": "ToDoApp.API.Controllers.AuthController",
     "Method": "RegisterV1",
     "RelativePath": "api/v1/Auth/Register",
     "HttpMethod": "POST",

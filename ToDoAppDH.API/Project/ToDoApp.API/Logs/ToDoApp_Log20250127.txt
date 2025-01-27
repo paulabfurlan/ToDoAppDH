@@ -1,2 +1,246 @@
 2025-01-27 19:20:03.520 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
 2025-01-27 19:35:40.537 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-27 20:13:47.737 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-27 20:13:48.140 -03:00 [INF] Now listening on: https://localhost:7042
+2025-01-27 20:13:48.143 -03:00 [INF] Now listening on: http://localhost:5198
+2025-01-27 20:13:48.318 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-27 20:13:48.321 -03:00 [INF] Hosting environment: Development
+2025-01-27 20:13:48.322 -03:00 [INF] Content root path: D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API
+2025-01-27 20:13:49.275 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger - null null
+2025-01-27 20:13:51.896 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger - 301 0 null 2632.8666ms
+2025-01-27 20:13:51.903 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/index.html - null null
+2025-01-27 20:13:52.015 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/index.html - 200 null text/html;charset=utf-8 111.2837ms
+2025-01-27 20:13:52.033 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/swagger-ui.css - null null
+2025-01-27 20:13:52.034 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/swagger-ui-bundle.js - null null
+2025-01-27 20:13:52.034 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-27 20:13:52.037 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_vs/browserLink - null null
+2025-01-27 20:13:52.039 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-27 20:13:52.077 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 39.6928ms
+2025-01-27 20:13:52.128 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.5885ms
+2025-01-27 20:13:52.157 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-27 20:13:52.160 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/swagger-ui.css - 200 143943 text/css 126.9936ms
+2025-01-27 20:13:52.514 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-27 20:13:52.518 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 484.9808ms
+2025-01-27 20:13:52.952 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-27 20:13:52.956 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 922.4724ms
+2025-01-27 20:13:53.090 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/favicon-32x32.png - null null
+2025-01-27 20:13:53.094 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-01-27 20:13:53.097 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/favicon-32x32.png - 200 628 image/png 7.7937ms
+2025-01-27 20:13:53.139 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - null null
+2025-01-27 20:13:53.361 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 222.9669ms
+2025-01-27 20:14:20.125 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - application/json 80
+2025-01-27 20:14:23.672 -03:00 [INF] CORS policy execution failed.
+2025-01-27 20:14:23.674 -03:00 [INF] Request origin https://localhost:7042 does not have permission to access the resource.
+2025-01-27 20:14:23.769 -03:00 [INF] Executing endpoint 'NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:14:23.802 -03:00 [INF] Route matched with {action = "LoginV1", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginV1(ToDoApp.API.Model.V1.DTO.LoginRequestDto) on controller NZWalks.API.Controllers.AuthController (ToDoApp.API).
+2025-01-27 20:14:28.292 -03:00 [INF] Executed DbCommand (180ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-27 20:14:28.327 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-01-27 20:14:28.338 -03:00 [INF] Executed action NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API) in 4528.2743ms
+2025-01-27 20:14:28.341 -03:00 [INF] Executed endpoint 'NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:14:28.355 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - 400 null text/plain; charset=utf-8 8230.2103ms
+2025-01-27 20:18:25.391 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Auth/Register - application/json 96
+2025-01-27 20:18:25.403 -03:00 [INF] CORS policy execution failed.
+2025-01-27 20:18:25.404 -03:00 [INF] Request origin https://localhost:7042 does not have permission to access the resource.
+2025-01-27 20:18:25.407 -03:00 [INF] Executing endpoint 'NZWalks.API.Controllers.AuthController.RegisterV1 (ToDoApp.API)'
+2025-01-27 20:18:25.415 -03:00 [INF] Route matched with {action = "RegisterV1", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterV1(ToDoApp.API.Model.V1.DTO.RegisterRequestDto) on controller NZWalks.API.Controllers.AuthController (ToDoApp.API).
+2025-01-27 20:18:25.757 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-01-27 20:18:26.346 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-01-27 20:18:26.394 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-01-27 20:18:26.521 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-01-27 20:18:26.550 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-01-27 20:18:26.572 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-01-27 20:18:26.585 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-01-27 20:18:26.590 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-01-27 20:18:26.604 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-01-27 20:18:26.704 -03:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 450), @p18='?' (Size = 450), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p19='?' (Size = 4000), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1),
+(@p2, @p3);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p4, [ConcurrencyStamp] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2025-01-27 20:18:26.724 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-01-27 20:18:26.726 -03:00 [INF] Executed action NZWalks.API.Controllers.AuthController.RegisterV1 (ToDoApp.API) in 1306.291ms
+2025-01-27 20:18:26.729 -03:00 [INF] Executed endpoint 'NZWalks.API.Controllers.AuthController.RegisterV1 (ToDoApp.API)'
+2025-01-27 20:18:26.732 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Auth/Register - 200 null text/plain; charset=utf-8 1341.8909ms
+2025-01-27 20:18:33.754 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - application/json 80
+2025-01-27 20:18:33.760 -03:00 [INF] CORS policy execution failed.
+2025-01-27 20:18:33.762 -03:00 [INF] Request origin https://localhost:7042 does not have permission to access the resource.
+2025-01-27 20:18:33.766 -03:00 [INF] Executing endpoint 'NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:18:33.770 -03:00 [INF] Route matched with {action = "LoginV1", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginV1(ToDoApp.API.Model.V1.DTO.LoginRequestDto) on controller NZWalks.API.Controllers.AuthController (ToDoApp.API).
+2025-01-27 20:18:33.805 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-27 20:18:34.075 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-01-27 20:18:34.252 -03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoApp.API.Model.V1.DTO.LoginResponseDto'.
+2025-01-27 20:18:34.258 -03:00 [INF] Executed action NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API) in 483.028ms
+2025-01-27 20:18:34.262 -03:00 [INF] Executed endpoint 'NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:18:34.264 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - 200 null application/json; charset=utf-8 510.9347ms
+2025-01-27 20:18:43.937 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7042/api/v1/Auth/Login - application/json 84
+2025-01-27 20:18:43.943 -03:00 [INF] Executing endpoint 'NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:18:43.946 -03:00 [INF] Route matched with {action = "LoginV1", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginV1(ToDoApp.API.Model.V1.DTO.LoginRequestDto) on controller NZWalks.API.Controllers.AuthController (ToDoApp.API).
+2025-01-27 20:18:43.959 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-27 20:18:44.076 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-01-27 20:18:44.083 -03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoApp.API.Model.V1.DTO.LoginResponseDto'.
+2025-01-27 20:18:44.093 -03:00 [INF] Executed action NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API) in 143.9062ms
+2025-01-27 20:18:44.098 -03:00 [INF] Executed endpoint 'NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:18:44.101 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7042/api/v1/Auth/Login - 200 null application/json; charset=utf-8 163.8085ms
+2025-01-27 20:23:10.061 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - text/plain;charset=UTF-8 67
+2025-01-27 20:23:10.073 -03:00 [INF] CORS policy execution failed.
+2025-01-27 20:23:10.077 -03:00 [INF] Request origin https://paulabfurlan.github.io does not have permission to access the resource.
+2025-01-27 20:23:10.081 -03:00 [INF] Executing endpoint 'NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:23:10.083 -03:00 [INF] Route matched with {action = "LoginV1", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginV1(ToDoApp.API.Model.V1.DTO.LoginRequestDto) on controller NZWalks.API.Controllers.AuthController (ToDoApp.API).
+2025-01-27 20:23:10.096 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-01-27 20:23:10.113 -03:00 [INF] Executed action NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API) in 26.7342ms
+2025-01-27 20:23:10.116 -03:00 [INF] Executed endpoint 'NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:23:10.118 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - 415 null application/problem+json; charset=utf-8 58.7267ms
+2025-01-27 20:26:05.687 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - text/plain;charset=UTF-8 67
+2025-01-27 20:26:05.700 -03:00 [INF] CORS policy execution failed.
+2025-01-27 20:26:05.701 -03:00 [INF] Request origin https://paulabfurlan.github.io does not have permission to access the resource.
+2025-01-27 20:26:05.703 -03:00 [INF] Executing endpoint 'NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:26:05.705 -03:00 [INF] Route matched with {action = "LoginV1", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginV1(ToDoApp.API.Model.V1.DTO.LoginRequestDto) on controller NZWalks.API.Controllers.AuthController (ToDoApp.API).
+2025-01-27 20:26:05.711 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-01-27 20:26:05.712 -03:00 [INF] Executed action NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API) in 2.3804ms
+2025-01-27 20:26:05.715 -03:00 [INF] Executed endpoint 'NZWalks.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:26:05.717 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - 415 null application/problem+json; charset=utf-8 29.7471ms
+2025-01-27 20:31:14.999 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-27 20:31:15.533 -03:00 [INF] Now listening on: https://localhost:7042
+2025-01-27 20:31:15.535 -03:00 [INF] Now listening on: http://localhost:5198
+2025-01-27 20:31:15.628 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-27 20:31:15.630 -03:00 [INF] Hosting environment: Development
+2025-01-27 20:31:15.632 -03:00 [INF] Content root path: D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API
+2025-01-27 20:31:16.737 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/index.html - null null
+2025-01-27 20:31:17.202 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/index.html - 200 null text/html;charset=utf-8 483.1193ms
+2025-01-27 20:31:17.247 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-27 20:31:17.247 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/swagger-ui.css - null null
+2025-01-27 20:31:17.254 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_vs/browserLink - null null
+2025-01-27 20:31:17.297 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 51.2505ms
+2025-01-27 20:31:17.305 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-27 20:31:17.321 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/swagger-ui.css - 499 143943 text/css 66.2644ms
+2025-01-27 20:31:17.444 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 190.5669ms
+2025-01-27 20:31:17.606 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/favicon-32x32.png - null null
+2025-01-27 20:31:17.623 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-01-27 20:31:17.626 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/favicon-32x32.png - 499 628 image/png 19.9449ms
+2025-01-27 20:31:17.670 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - null null
+2025-01-27 20:31:17.889 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 219.7743ms
+2025-01-27 20:31:25.121 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7042/api/v1/Auth/Login - application/json 84
+2025-01-27 20:31:25.143 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:31:25.202 -03:00 [INF] Route matched with {action = "LoginV1", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginV1(ToDoApp.API.Model.V1.DTO.LoginRequestDto) on controller ToDoApp.API.Controllers.AuthController (ToDoApp.API).
+2025-01-27 20:31:28.077 -03:00 [INF] Executed DbCommand (126ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-27 20:31:28.545 -03:00 [INF] Executed DbCommand (19ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-01-27 20:31:28.624 -03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoApp.API.Model.V1.DTO.LoginResponseDto'.
+2025-01-27 20:31:28.645 -03:00 [INF] Executed action ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API) in 3430.8489ms
+2025-01-27 20:31:28.650 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:31:28.670 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7042/api/v1/Auth/Login - 200 null application/json; charset=utf-8 3548.777ms
+2025-01-27 20:31:39.210 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - text/plain;charset=UTF-8 67
+2025-01-27 20:31:39.225 -03:00 [INF] CORS policy execution failed.
+2025-01-27 20:31:39.227 -03:00 [INF] Request origin https://paulabfurlan.github.io does not have permission to access the resource.
+2025-01-27 20:31:39.230 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:31:39.232 -03:00 [INF] Route matched with {action = "LoginV1", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginV1(ToDoApp.API.Model.V1.DTO.LoginRequestDto) on controller ToDoApp.API.Controllers.AuthController (ToDoApp.API).
+2025-01-27 20:31:39.248 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-01-27 20:31:39.266 -03:00 [INF] Executed action ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API) in 26.8961ms
+2025-01-27 20:31:39.271 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:31:39.275 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - 415 null application/problem+json; charset=utf-8 64.1912ms
+2025-01-27 20:32:49.887 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-27 20:32:50.481 -03:00 [INF] Now listening on: https://localhost:7042
+2025-01-27 20:32:50.502 -03:00 [INF] Now listening on: http://localhost:5198
+2025-01-27 20:32:50.641 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-27 20:32:50.659 -03:00 [INF] Hosting environment: Development
+2025-01-27 20:32:50.661 -03:00 [INF] Content root path: D:\OneDrive\Documents\Portifólio\To Do App\github\ToDoAppDH\ToDoAppDH.API\Project\ToDoApp.API
+2025-01-27 20:32:51.230 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/index.html - null null
+2025-01-27 20:32:51.655 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/index.html - 200 null text/html;charset=utf-8 434.3077ms
+2025-01-27 20:32:51.703 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_vs/browserLink - null null
+2025-01-27 20:32:51.703 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-27 20:32:51.740 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 38.3588ms
+2025-01-27 20:32:51.833 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 130.3264ms
+2025-01-27 20:32:52.090 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - null null
+2025-01-27 20:32:52.375 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 285.8342ms
+2025-01-27 20:32:59.318 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7042/api/v1/Auth/Login - application/json 84
+2025-01-27 20:32:59.352 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:32:59.396 -03:00 [INF] Route matched with {action = "LoginV1", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginV1(ToDoApp.API.Model.V1.DTO.LoginRequestDto) on controller ToDoApp.API.Controllers.AuthController (ToDoApp.API).
+2025-01-27 20:33:02.100 -03:00 [INF] Executed DbCommand (107ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-27 20:33:02.706 -03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-01-27 20:33:02.795 -03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoApp.API.Model.V1.DTO.LoginResponseDto'.
+2025-01-27 20:33:02.814 -03:00 [INF] Executed action ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API) in 3407.2087ms
+2025-01-27 20:33:02.818 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:33:02.839 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7042/api/v1/Auth/Login - 200 null application/json; charset=utf-8 3522.2738ms
+2025-01-27 20:33:13.302 -03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7042/api/v1/Auth/Login - null null
+2025-01-27 20:33:13.317 -03:00 [INF] CORS policy execution successful.
+2025-01-27 20:33:13.323 -03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7042/api/v1/Auth/Login - 204 null null 22.3649ms
+2025-01-27 20:33:13.326 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - application/json 67
+2025-01-27 20:33:13.340 -03:00 [INF] CORS policy execution successful.
+2025-01-27 20:33:13.341 -03:00 [INF] Executing endpoint 'ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:33:13.344 -03:00 [INF] Route matched with {action = "LoginV1", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginV1(ToDoApp.API.Model.V1.DTO.LoginRequestDto) on controller ToDoApp.API.Controllers.AuthController (ToDoApp.API).
+2025-01-27 20:33:13.451 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-27 20:33:13.579 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-01-27 20:33:13.591 -03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoApp.API.Model.V1.DTO.LoginResponseDto'.
+2025-01-27 20:33:13.595 -03:00 [INF] Executed action ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API) in 248.1113ms
+2025-01-27 20:33:13.600 -03:00 [INF] Executed endpoint 'ToDoApp.API.Controllers.AuthController.LoginV1 (ToDoApp.API)'
+2025-01-27 20:33:13.607 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7042/api/v1/Auth/Login - 200 null application/json; charset=utf-8 281.0333ms
+2025-01-27 20:35:36.804 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-27 20:52:07.670 -03:00 [INF] User profile is available. Using 'C:\Users\furla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.

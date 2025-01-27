@@ -171,10 +171,10 @@ btnCriar.addEventListener("click", function (event) {
     fetch(apiCadastro, {
       method: "POST",
       headers: {
-        "Content-type": "application/json",
-        'Access-Control-Allow-Origin': '*'
+        "Content-type": "application/json"
       },
-      body: JSON.stringify(cadastro)
+      body: JSON.stringify(cadastro),
+      mode: "cors"
     })
     .then(function (resposta) {
       if(resposta.ok)
@@ -182,10 +182,10 @@ btnCriar.addEventListener("click", function (event) {
         fetch(apiUsuario, {
           method: "POST",
           headers: {
-            "Content-type": "application/json",
-            'Access-Control-Allow-Origin': '*'
+            "Content-type": "application/json"
           },
-          body: JSON.stringify(usuario)
+          body: JSON.stringify(usuario),
+          mode: "cors"
         })
         .then(function (resposta2) {
           if(resposta2.ok)

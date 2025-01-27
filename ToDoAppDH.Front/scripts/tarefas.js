@@ -30,9 +30,9 @@ fetch(apiGetMe, {
   method: "GET",
   headers: {
     "Content-type": "application/json",
-    "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
-    'Access-Control-Allow-Origin': '*'
-  }
+    "Authorization": "Bearer " + sessionStorage.getItem("jwt")
+  },
+  mode: "cors"
 })
   .then(function (resposta) {
     return resposta.json();
@@ -111,10 +111,10 @@ btnCriar.addEventListener("click", function (event) {
       method: "POST",
       headers: {
         "Content-type": "application/json",
-        "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
-        'Access-Control-Allow-Origin': '*'
+        "Authorization": "Bearer " + sessionStorage.getItem("jwt")
       },
-      body: JSON.stringify(tarefa)
+      body: JSON.stringify(tarefa),
+      mode: "cors"
     })
       .then(function (resposta) {
         return resposta.json();
@@ -260,10 +260,10 @@ function iniTarefas()
               method: "PUT",
               headers: {
                 "Content-type": "application/json",
-                "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
-                'Access-Control-Allow-Origin': '*'
+                "Authorization": "Bearer " + sessionStorage.getItem("jwt")
               },
-              body: JSON.stringify(tarefa)
+              body: JSON.stringify(tarefa),
+              mode: "cors"
             })
               .then(function (resposta) {
                 return resposta.json();
@@ -295,10 +295,10 @@ function iniTarefas()
               method: "PUT",
               headers: {
                 "Content-type": "application/json",
-                "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
-                'Access-Control-Allow-Origin': '*'
+                "Authorization": "Bearer " + sessionStorage.getItem("jwt")
               },
-              body: JSON.stringify(tarefa)
+              body: JSON.stringify(tarefa),
+              mode: "cors"
             })
               .then(function (resposta) {
                 return resposta.json();
@@ -326,9 +326,9 @@ function iniTarefas()
             method: "DELETE",
             headers: {
               "Content-type": "application/json",
-              "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
-              'Access-Control-Allow-Origin': '*'
-            }
+              "Authorization": "Bearer " + sessionStorage.getItem("jwt")
+            },
+            mode: "cors"
           })
             .then(function (resposta) {
               document.location.reload(true)
@@ -373,9 +373,9 @@ function removerConta()
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
-        "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
-        'Access-Control-Allow-Origin': '*'
-      }
+        "Authorization": "Bearer " + sessionStorage.getItem("jwt")
+      },
+      mode: "cors"
     })
       .then(function (resposta) {
         countTasks++;
@@ -398,9 +398,9 @@ function removerConta()
     method: "DELETE",
     headers: {
       "Content-type": "application/json",
-      "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
-      'Access-Control-Allow-Origin': '*'
-    }
+      "Authorization": "Bearer " + sessionStorage.getItem("jwt")
+    },
+    mode: "cors"
   })
     .then(function (resposta) {
       console.log("Deleted the User data!");
@@ -421,10 +421,10 @@ function removerConta()
     method: "DELETE",
     headers: {
       "Content-type": "application/json",
-      "Authorization": "Bearer " + sessionStorage.getItem("jwt"),
-      'Access-Control-Allow-Origin': '*'
+      "Authorization": "Bearer " + sessionStorage.getItem("jwt")
     },
-    body: JSON.stringify(userDelete)
+    body: JSON.stringify(userDelete),
+    mode: "cors"
   })
     .then(function (resposta) {
       alert("The User Account was successfully deleted!");
