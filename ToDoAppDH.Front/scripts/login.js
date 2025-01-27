@@ -69,7 +69,7 @@ btnAcessar.addEventListener("click", function (event) {
         "Content-type": "application/json"
       },
       body: JSON.stringify(login),
-      mode: "cors"
+      mode: "no-cors"
     })
       .then(function (resposta) {
         return resposta.json();
