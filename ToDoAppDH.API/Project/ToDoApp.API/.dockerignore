@@ -1,0 +1,11 @@
+bin/
+obj/
+Logs/
+.vs/
+.vscode/
+*.user
+*.suo
+Properties/PublishProfiles/*.pubxml
+Properties/PublishProfiles/*.pubxml.user
+Properties/ServiceDependencies/
+Properties/serviceDependencies*.json

@@ -15,6 +15,7 @@ using Web_API_Versioning.API;
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
+var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? [];
 
 // Add services to the container.
 builder.Services.AddCors(options =>
@@ -22,28 +23,27 @@ builder.Services.AddCors(options =>
 	options.AddPolicy(name: MyAllowSpecificOrigins,
 					  policy =>
 					  {
-						  policy.WithOrigins("https://ambitious-wave-05ec9f90f.4.azurestaticapps.net",
-											 "https://ambitious-wave-05ec9f90f.4.azurestaticapps.net/index.html",
-											 "https://ambitious-wave-05ec9f90f.4.azurestaticapps.net/signup.html",
-											 "https://ambitious-wave-05ec9f90f.4.azurestaticapps.net/tarefas.html",
-											 "https://paulabfurlan.github.io",
-											 "https://paulabfurlan.github.io/index.html",
-											 "https://paulabfurlan.github.io/signup.html",
-											 "https://paulabfurlan.github.io/tarefas.html")
+						  policy.WithOrigins(allowedOrigins)
 								.AllowAnyHeader()
 								.AllowAnyMethod();
 					  });
 });
 
-var logger = new LoggerConfiguration()
+var loggerConfiguration = new LoggerConfiguration()
 	.WriteTo.Console()
-	.WriteTo.File("Logs/ToDoApp_Log.txt", rollingInterval: RollingInterval.Day)
-	.MinimumLevel.Information()
-	.CreateLogger();
+	.MinimumLevel.Information();
+
+if (builder.Configuration.GetValue("Logging:File:Enabled", true))
+{
+	loggerConfiguration.WriteTo.File("Logs/ToDoApp_Log.txt", rollingInterval: RollingInterval.Day);
+}
+
+var logger = loggerConfiguration.CreateLogger();
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 
 builder.Services.AddControllers();
+builder.Services.AddHealthChecks();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -105,7 +105,7 @@ builder.Services.AddScoped<IUserRepository, SQLUserRepository>();
 builder.Services.AddScoped<ITaskRepository, SQLTaskRepository>();
 
 // Inject the AutoMapper dependencies
-builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
+builder.Services.AddAutoMapper(config => config.AddProfile<AutoMapperProfiles>());
 
 // Inject Identity dependencies and setting up the Identity Options
 builder.Services.AddIdentityCore<IdentityUser>()
@@ -167,8 +167,10 @@ app.UseMiddleware<ExceptionHandlerMiddleware>();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapHealthChecks("/health");
 app.MapControllers();
 
 app.Run();

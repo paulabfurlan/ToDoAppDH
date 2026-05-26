@@ -1,0 +1,20 @@
+bin/
+obj/
+Logs/
+.vs/
+.vscode/
+*.user
+*.suo
+*.rsuser
+*.userosscache
+*.sln.docstates
+
+# Azure/Visual Studio publish artifacts can contain secrets and provider-specific IDs.
+Project/ToDoApp.API/Properties/PublishProfiles/
+Project/ToDoApp.API/Properties/ServiceDependencies/
+Project/ToDoApp.API/Properties/serviceDependencies*.json
+
+# Local environment secrets
+appsettings.Local.json
+appsettings.*.Local.json
+*.env
