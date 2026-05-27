@@ -54,7 +54,7 @@ dotnet ef database update --context ToDoAppAuthDbContext --project Project/ToDoA
 
 ## Deploy flow
 
-1. Create the encrypted Terraform remote state backend: S3 bucket plus DynamoDB lock table.
+1. Create the encrypted Terraform remote state backend using `infra-bootstrap`: S3 bucket plus DynamoDB lock table.
 2. Use Terraform in `infra/` to create the base AWS resources: VPC, RDS SQL Server and ECR.
 3. Read the RDS-managed master user secret from Secrets Manager.
 4. Create Secrets Manager secrets for both connection strings and the JWT key.

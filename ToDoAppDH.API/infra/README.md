@@ -22,18 +22,18 @@ Terraform state can still contain sensitive metadata and secret ARNs. For real d
 
 ## 1. Prepare remote Terraform state
 
-Create these resources manually or with a separate bootstrap stack:
+Create these resources with the separate bootstrap Terraform project in `../infra-bootstrap`:
 
 - S3 bucket for Terraform state, with versioning and encryption enabled.
 - DynamoDB table for Terraform locking, with a string partition key named `LockID`.
 
-Then copy:
+After applying `../infra-bootstrap`, copy the `backend_tf` output into this folder:
 
 ```powershell
-Copy-Item backend.tf.example backend.tf
+../infra/backend.tf
 ```
 
-Edit `backend.tf` with your bucket, table and region.
+The existing `backend.tf.example` remains as a reference.
 
 ## 2. Configure variables
 

@@ -1,0 +1,13 @@
+aws_region  = "sa-east-1"
+project_name = "todoapp"
+environment  = "prod"
+
+# Optional. Bucket names are globally unique. Leave empty to use:
+# <project>-<environment>-terraform-state-<aws-account-id>
+state_bucket_name = ""
+
+# Optional. Leave empty to use:
+# <project>-<environment>-terraform-lock
+lock_table_name = ""
+
+force_destroy_state_bucket = false
