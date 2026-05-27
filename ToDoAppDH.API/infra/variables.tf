@@ -28,12 +28,6 @@ variable "database_username" {
   default     = "todoappadmin"
 }
 
-variable "database_password" {
-  description = "Master password for the RDS SQL Server instance."
-  type        = string
-  sensitive   = true
-}
-
 variable "database_instance_class" {
   description = "RDS instance class for SQL Server."
   type        = string
@@ -83,6 +77,24 @@ variable "app_image_identifier" {
 
 variable "api_public_url" {
   description = "Public API URL used as JWT issuer/audience after App Runner or a custom domain is available."
+  type        = string
+  default     = ""
+}
+
+variable "todoapp_connection_string_secret_arn" {
+  description = "Secrets Manager ARN containing the full ToDoAppDb SQL Server connection string."
+  type        = string
+  default     = ""
+}
+
+variable "todoapp_auth_connection_string_secret_arn" {
+  description = "Secrets Manager ARN containing the full ToDoAppAuthDb SQL Server connection string."
+  type        = string
+  default     = ""
+}
+
+variable "jwt_key_secret_arn" {
+  description = "Secrets Manager ARN containing the JWT signing key."
   type        = string
   default     = ""
 }

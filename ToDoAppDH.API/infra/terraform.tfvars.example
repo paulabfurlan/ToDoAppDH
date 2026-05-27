@@ -3,7 +3,6 @@ project_name = "todoapp"
 environment  = "prod"
 
 database_username            = "todoappadmin"
-database_password            = "change-this-strong-password"
 database_instance_class      = "db.t3.small"
 database_allocated_storage   = 20
 database_skip_final_snapshot = false
@@ -17,3 +16,6 @@ create_app_runner_service = false
 # create_app_runner_service = true
 # app_image_identifier      = "123456789012.dkr.ecr.sa-east-1.amazonaws.com/todoapp-prod-api:latest"
 # api_public_url            = "https://xxxxxxxxxx.sa-east-1.awsapprunner.com/"
+# todoapp_connection_string_secret_arn      = "arn:aws:secretsmanager:sa-east-1:123456789012:secret:todoapp/prod/connectionstrings/todoappdb-xxxxxx"
+# todoapp_auth_connection_string_secret_arn = "arn:aws:secretsmanager:sa-east-1:123456789012:secret:todoapp/prod/connectionstrings/todoappauthdb-xxxxxx"
+# jwt_key_secret_arn                        = "arn:aws:secretsmanager:sa-east-1:123456789012:secret:todoapp/prod/jwt/key-xxxxxx"

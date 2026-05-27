@@ -74,24 +74,24 @@ resource "aws_db_subnet_group" "database" {
 }
 
 resource "aws_db_instance" "sql_server" {
-  identifier                = "${local.name_prefix}-sqlserver"
-  engine                    = var.database_engine
-  engine_version            = var.database_engine_version
-  instance_class            = var.database_instance_class
-  allocated_storage         = var.database_allocated_storage
-  storage_type              = "gp3"
-  username                  = var.database_username
-  password                  = var.database_password
-  license_model             = "license-included"
-  db_subnet_group_name      = aws_db_subnet_group.database.name
-  vpc_security_group_ids    = [aws_security_group.database.id]
-  publicly_accessible       = false
-  multi_az                  = false
-  backup_retention_period   = 7
-  skip_final_snapshot       = var.database_skip_final_snapshot
-  final_snapshot_identifier = var.database_skip_final_snapshot ? null : "${local.name_prefix}-sqlserver-final-snapshot"
-  deletion_protection       = !var.database_skip_final_snapshot
-  apply_immediately         = true
+  identifier                  = "${local.name_prefix}-sqlserver"
+  engine                      = var.database_engine
+  engine_version              = var.database_engine_version
+  instance_class              = var.database_instance_class
+  allocated_storage           = var.database_allocated_storage
+  storage_type                = "gp3"
+  username                    = var.database_username
+  manage_master_user_password = true
+  license_model               = "license-included"
+  db_subnet_group_name        = aws_db_subnet_group.database.name
+  vpc_security_group_ids      = [aws_security_group.database.id]
+  publicly_accessible         = false
+  multi_az                    = false
+  backup_retention_period     = 7
+  skip_final_snapshot         = var.database_skip_final_snapshot
+  final_snapshot_identifier   = var.database_skip_final_snapshot ? null : "${local.name_prefix}-sqlserver-final-snapshot"
+  deletion_protection         = !var.database_skip_final_snapshot
+  apply_immediately           = true
 
   tags = local.tags
 }
@@ -105,11 +105,6 @@ resource "aws_ecr_repository" "api" {
   }
 
   tags = local.tags
-}
-
-resource "random_password" "jwt_key" {
-  length  = 64
-  special = true
 }
 
 resource "aws_iam_role" "app_runner_ecr_access" {
@@ -138,6 +133,52 @@ resource "aws_iam_role_policy_attachment" "app_runner_ecr_access" {
 
   role       = aws_iam_role.app_runner_ecr_access[0].name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSAppRunnerServicePolicyForECRAccess"
+}
+
+resource "aws_iam_role" "app_runner_instance" {
+  count = var.create_app_runner_service ? 1 : 0
+
+  name = "${local.name_prefix}-apprunner-instance"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Principal = {
+          Service = "tasks.apprunner.amazonaws.com"
+        }
+        Action = "sts:AssumeRole"
+      }
+    ]
+  })
+
+  tags = local.tags
+}
+
+resource "aws_iam_role_policy" "app_runner_secrets_access" {
+  count = var.create_app_runner_service ? 1 : 0
+
+  name = "${local.name_prefix}-apprunner-secrets-access"
+  role = aws_iam_role.app_runner_instance[0].id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "secretsmanager:GetSecretValue",
+          "secretsmanager:DescribeSecret"
+        ]
+        Resource = [
+          var.todoapp_connection_string_secret_arn,
+          var.todoapp_auth_connection_string_secret_arn,
+          var.jwt_key_secret_arn
+        ]
+      }
+    ]
+  })
 }
 
 resource "aws_apprunner_vpc_connector" "api" {
@@ -170,21 +211,25 @@ resource "aws_apprunner_service" "api" {
         port = "8080"
 
         runtime_environment_variables = {
-          ASPNETCORE_ENVIRONMENT                         = "Production"
-          ConnectionStrings__ToDoAppConnectionString     = "Server=${aws_db_instance.sql_server.address},1433;Database=ToDoAppDb;User Id=${var.database_username};Password=${var.database_password};TrustServerCertificate=True;Encrypt=True"
-          ConnectionStrings__ToDoAppAuthConnectionString = "Server=${aws_db_instance.sql_server.address},1433;Database=ToDoAppAuthDb;User Id=${var.database_username};Password=${var.database_password};TrustServerCertificate=True;Encrypt=True"
-          Cors__AllowedOrigins__0                        = var.amplify_origin
-          Jwt__Audience                                  = var.api_public_url
-          Jwt__Issuer                                    = var.api_public_url
-          Jwt__Key                                       = random_password.jwt_key.result
+          ASPNETCORE_ENVIRONMENT  = "Production"
+          Cors__AllowedOrigins__0 = var.amplify_origin
+          Jwt__Audience           = var.api_public_url
+          Jwt__Issuer             = var.api_public_url
+        }
+
+        runtime_environment_secrets = {
+          ConnectionStrings__ToDoAppConnectionString     = var.todoapp_connection_string_secret_arn
+          ConnectionStrings__ToDoAppAuthConnectionString = var.todoapp_auth_connection_string_secret_arn
+          Jwt__Key                                       = var.jwt_key_secret_arn
         }
       }
     }
   }
 
   instance_configuration {
-    cpu    = "0.25 vCPU"
-    memory = "0.5 GB"
+    cpu               = "0.25 vCPU"
+    memory            = "0.5 GB"
+    instance_role_arn = aws_iam_role.app_runner_instance[0].arn
   }
 
   network_configuration {
