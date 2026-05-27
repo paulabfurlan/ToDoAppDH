@@ -5,6 +5,7 @@
 - Frontend: keep AWS Amplify.
 - API: AWS App Runner or ECS Fargate running the .NET 8 container in `Project/ToDoApp.API/Dockerfile`.
 - Database: Amazon RDS for SQL Server to avoid changing Entity Framework provider and migrations.
+- Infrastructure as Code: Terraform files in `infra/`.
 - Secrets/config: App Runner/ECS environment variables or AWS Secrets Manager.
 - Logs: stdout/stderr to CloudWatch Logs. File logging is disabled in `appsettings.Production.json`.
 
@@ -48,10 +49,10 @@ dotnet ef database update --context ToDoAppAuthDbContext --project Project/ToDoA
 
 ## Deploy flow
 
-1. Build and push the Docker image to Amazon ECR.
-2. Create an App Runner service from the ECR image, or an ECS Fargate service behind an Application Load Balancer.
-3. Configure the environment variables above.
-4. Set the health check path to `/health`.
+1. Use Terraform in `infra/` to create the base AWS resources: VPC, RDS SQL Server and ECR.
+2. Build and push the Docker image to the ECR repository created by Terraform.
+3. Enable `create_app_runner_service` in Terraform and apply again to create App Runner.
+4. Configure the final App Runner URL as `api_public_url` and apply once more so JWT issuer/audience match the API URL.
 5. Apply the EF migrations against the clean RDS databases.
 6. Update the Amplify frontend API base URL to the new AWS API URL.
 7. After validation, cut traffic from Azure to AWS and decommission the Azure resources.

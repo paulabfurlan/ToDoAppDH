@@ -18,3 +18,11 @@ Project/ToDoApp.API/Properties/serviceDependencies*.json
 appsettings.Local.json
 appsettings.*.Local.json
 *.env
+
+# Terraform local state and secrets
+**/.terraform/
+**/terraform.tfstate
+**/terraform.tfstate.*
+**/terraform.tfvars
+**/terraform.tfvars.json
+**/*.tfplan
